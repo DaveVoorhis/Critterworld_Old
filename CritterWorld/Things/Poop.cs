@@ -18,7 +18,7 @@ namespace CritterWorld
             AnimationFramesInMultipleFiles poopImages = new AnimationFramesInMultipleFiles();
             poopImages.Add("poop.png");
             Poop poop = new Poop(world, new Sprite(new SpriteImageMultipleFiles(poopImages)), PoopBoundingRadius);
-            poop.Position = world.GetRandomLocationNear(nearX, nearY, poop.Width, poop.Height, PoopBoundingRadius * 2);
+            poop.Position = world.GetRandomLocationNear(nearX, nearY, poop.Width, poop.Height, PoopBoundingRadius * 3);
             return poop;
         }
 

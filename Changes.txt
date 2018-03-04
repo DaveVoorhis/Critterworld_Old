@@ -1,6 +1,7 @@
 Version 0.1.11
 
  - Re-instate Configuration, since it won't be part of the assignment.
+ - Added "poop".
 
 Version 0.1.10
 

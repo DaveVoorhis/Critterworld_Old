@@ -35,7 +35,7 @@ namespace CritterWorld
         {
             get
             {
-                return 10;
+                return 11;
             }
         }
 
