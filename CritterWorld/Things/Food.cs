@@ -15,8 +15,6 @@ namespace CritterWorld
 
         public static Food CreateFood(World world)
         {
-            Logger.OutputToLog("CreateFood", Logger.LogLevel.Message);
-
             AnimationFramesInMultipleFiles foodImages = new AnimationFramesInMultipleFiles();
             foodImages.Add("Kiwi-Fruit.png");
             return new Food(world, new Sprite(new SpriteImageMultipleFiles(foodImages)), FoodBoundingRadius);
@@ -41,10 +39,8 @@ namespace CritterWorld
 
         protected override void NotifyBumped(VisibleObject bumpedObject)
         {
-            Logger.OutputToLog("Food bumped", Logger.LogLevel.Message);
             if (bumpedObject is Critter)
             {
-                Logger.OutputToLog("NotifyBumped against " + bumpedObject, Logger.LogLevel.Message);
                 Critter critter = (Critter)bumpedObject;
                 critter.Energy += Utility.GetConfiguration().CritterEnergyPerFeed;
                 try

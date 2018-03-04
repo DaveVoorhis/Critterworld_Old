@@ -236,11 +236,11 @@
     <EmbeddedResource Include="Images\Background06.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\ballcache.png" />
-    <Content Include="Images\bomb.png" />
-    <Content Include="Images\gift.png" />
-    <Content Include="Images\poop.png" />
-    <Content Include="Images\tennisball.png" />
+    <EmbeddedResource Include="Images\ballcache.png" />
+    <EmbeddedResource Include="Images\bomb.png" />
+    <EmbeddedResource Include="Images\gift.png" />
+    <EmbeddedResource Include="Images\poop.png" />
+    <EmbeddedResource Include="Images\tennisball.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

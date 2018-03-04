@@ -510,8 +510,8 @@ namespace CritterWorld
             while (true)
             {
                 double theta = Utility.NextRandom(0, Math.PI * 2);
-                int x = (int)(distance * Math.Sin(theta));
-                int y = (int)(distance * Math.Cos(theta));
+                int x = (int)(distance * Math.Sin(theta)) + nearX;
+                int y = (int)(distance * Math.Cos(theta)) + nearY;
                 if (map.IsClearOfTerrain(x, y, width, height) && !IsBlockedByCritter(x, y, width, height))
                 {
                     return new Point(x, y);

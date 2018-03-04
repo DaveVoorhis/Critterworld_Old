@@ -27,6 +27,9 @@ namespace CritterWorld
 
         Timer energyTimer;
         Timer ageTimer;
+        Timer poopTimer;
+
+        bool ateEnoughToPoop = false;
 
         DateTime birthday = DateTime.MinValue;
         TimeSpan timeToGoal = TimeSpan.MinValue;
@@ -94,6 +97,10 @@ namespace CritterWorld
             ageTimer.Interval = 1000 * 60;
             ageTimer.Tick += new EventHandler(AgeTimer_Tick);
             ageTimer.Start();
+            poopTimer = new Timer();
+            poopTimer.Interval = Utility.NextRandom(1000, 10000);
+            poopTimer.Tick += new EventHandler(PoopTimer_Tick);
+            poopTimer.Start();
         }
 
         public string WhoAmI
@@ -113,6 +120,17 @@ namespace CritterWorld
         private void AgeTimer_Tick(Object myObject, EventArgs myEventArgs)
         {
             Age++;
+        }
+
+        private void PoopTimer_Tick(Object myObject, EventArgs myEventArgs)
+        {
+            if (ateEnoughToPoop)
+            {
+                Logger.OutputToLog(WhoAmI + " pooped.", Logger.LogLevel.Message);
+                Poop.CreatePoop(World, X, Y);
+                ateEnoughToPoop = false;
+            }
+            poopTimer.Interval = Utility.NextRandom(1000, 10000);
         }
 
         // Handle an event.  If consumed by this object, return true.
@@ -378,6 +396,8 @@ namespace CritterWorld
         {
             if (bumpedObject is Food)
                 return;
+            if (bumpedObject is Poop)
+                return;
             base.NotifyBumped(bumpedObject);
             try
             {
@@ -397,15 +417,7 @@ namespace CritterWorld
 
         internal void NotifyEating(Food food)
         {
-           Logger.OutputToLog("NotifyEating called in " + this, Logger.LogLevel.Message);
-            // After eating, some time between 1 second and 10 seconds later, poop.
-            Timer poopTimer = new Timer();
-            poopTimer.Interval = randomiser.Next(1000, 10000);
-            poopTimer.Tick += (sender, args) => 
-            {
-                Poop.CreatePoop(World, X, Y);
-                poopTimer.Stop();
-            };
+            ateEnoughToPoop = true;
         }
 
         public override bool IsBlockingObject()
@@ -422,6 +434,7 @@ namespace CritterWorld
             {
                 return;
             }
+            poopTimer.Stop();
             energyTimer.Stop();
             ageTimer.Stop();
             Logger.OutputToLog("Critter " + WhoAmI + " in file " + fileContainingBrain + " died: " + reason, Logger.LogLevel.Message);

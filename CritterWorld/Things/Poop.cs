@@ -18,7 +18,7 @@ namespace CritterWorld
             AnimationFramesInMultipleFiles poopImages = new AnimationFramesInMultipleFiles();
             poopImages.Add("poop.png");
             Poop poop = new Poop(world, new Sprite(new SpriteImageMultipleFiles(poopImages)), PoopBoundingRadius);
-            poop.Position = world.GetRandomLocationNear(nearX, nearY, poop.Width, poop.Height, PoopBoundingRadius);
+            poop.Position = world.GetRandomLocationNear(nearX, nearY, poop.Width, poop.Height, PoopBoundingRadius * 2);
             return poop;
         }
 
@@ -53,7 +53,6 @@ namespace CritterWorld
                     Logger.OutputToLog("Error in NotifyBumped from file " + critter.File + ": Exception is " + e.Message + "\n" + e.StackTrace, Logger.LogLevel.Error);
                     Die("Crashed");
                 }
-                Die("Stepped In");
             }
         }
 
