@@ -99,20 +99,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnimationFramesInOneFile.cs" />
-    <Compile Include="AnimationFramesInMultipleFiles.cs" />
-    <Compile Include="SpriteImageMultipleFiles.cs" />
-    <Compile Include="SpriteImageOneFile.cs" />
-    <Compile Include="SpriteImage.cs" />
-    <Compile Include="Sprite.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SpriteCollection.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SpriteEnvironment.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>

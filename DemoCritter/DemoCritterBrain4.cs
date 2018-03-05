@@ -74,7 +74,7 @@ namespace DemoCritter
             }
         }
 
-       private static Image GetImageFromResource(string imageName)
+        private static Image GetImageFromResource(string imageName)
         {
             System.IO.Stream stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("DemoCritter." + imageName);
             if (stream != null)
@@ -86,7 +86,6 @@ namespace DemoCritter
                 return null;
             }
         }
-
 
     }
 }

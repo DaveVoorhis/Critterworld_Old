@@ -96,19 +96,18 @@ namespace CritterWorld
         // Dump map representation to logger.  Diagnostic routine only.
         public void Dump()
         {
-            Logger.Start();
-            Logger.WriteLine("Map width = " + panel.ClientSize.Width);
-            Logger.WriteLine("Map height = " + panel.ClientSize.Height);
+            Logger.OutputToLog("Map width = " + panel.ClientSize.Width, Logger.LogLevel.Message);
+            Logger.OutputToLog("Map height = " + panel.ClientSize.Height, Logger.LogLevel.Message);
+            string line = "";
             for (int y = 0; y < panel.ClientSize.Height; y++)
             {
                 for (int x = 0; x < panel.ClientSize.Width; x++)
                 {
                     int mapValue = map[x, y];
-                    Logger.Write(mapValue == 0 ? " " : mapValue >= 255 ? "o" : ".");
+                    line += (mapValue == 0) ? " " : mapValue >= 255 ? "o" : ".";
                 }
-                Logger.WriteLine("");
+                Logger.OutputToLog(line, Logger.LogLevel.Message);
             }
-            Logger.Stop();
         }
 
     }

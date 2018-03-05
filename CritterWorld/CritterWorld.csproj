@@ -84,6 +84,15 @@
     <Compile Include="CritterWorldForm.Designer.cs">
       <DependentUpon>CritterWorldForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logger.cs" />
+    <Compile Include="Sprites\AnimationFramesInMultipleFiles.cs" />
+    <Compile Include="Sprites\AnimationFramesInOneFile.cs" />
+    <Compile Include="Sprites\Sprite.cs" />
+    <Compile Include="Sprites\SpriteCollection.cs" />
+    <Compile Include="Sprites\SpriteEnvironment.cs" />
+    <Compile Include="Sprites\SpriteImage.cs" />
+    <Compile Include="Sprites\SpriteImageMultipleFiles.cs" />
+    <Compile Include="Sprites\SpriteImageOneFile.cs" />
     <Compile Include="Things\Poop.cs" />
     <Compile Include="Things\Goal.cs" />
     <Compile Include="Leaderboard.cs" />
@@ -148,14 +157,6 @@
     <ProjectReference Include="..\DemoCritter\DemoCritter.csproj">
       <Project>{6670A259-8EE4-462F-8321-5827AA328536}</Project>
       <Name>DemoCritter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Logging\Logging.csproj">
-      <Project>{B62C4270-A856-4015-A7E2-ADADC7F1FB21}</Project>
-      <Name>Logging</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sprites\Sprites.csproj">
-      <Project>{A4C46C30-912E-4FBB-A1DC-C847158A9AEE}</Project>
-      <Name>Sprites</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

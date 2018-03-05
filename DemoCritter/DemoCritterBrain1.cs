@@ -52,7 +52,6 @@ namespace DemoCritter
             Critter.Move(10);
         }
 
-
         public override void NotifyCloseToFood(int x, int y)
         {
             Critter.Direction = Critter.GetDirectionTo(x, y);

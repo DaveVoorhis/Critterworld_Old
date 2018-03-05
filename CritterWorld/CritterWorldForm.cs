@@ -54,6 +54,7 @@ namespace CritterWorld
         {
             Text = Version.VersionString;
             InitializeComponent();
+            Logger.SetLogWidget(textBoxLog);
             arena.CreateWorld();
             FormClosed += new FormClosedEventHandler(CritterWorldForm_FormClosed);
             messageMarquee = this.marqueeLabel1;
@@ -118,11 +119,6 @@ namespace CritterWorld
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Shutdown();
-        }
-
-        private void loggingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Logger.SetLoggingState(loggingToolStripMenuItem.Checked);
         }
 
         private void editConfigurationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -266,9 +262,5 @@ namespace CritterWorld
             }
         }
 
-        private void dataGridViewRunning_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
