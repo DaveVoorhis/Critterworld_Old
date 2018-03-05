@@ -17,8 +17,6 @@ namespace CritterWorld
             Error
         }
 
-        static bool isLogging = false;
-
         static string debugLogFile = "debug.txt";
         static string messageLogFile = "messages.txt";
         static string warningLogFile = "warnings.txt";
@@ -28,6 +26,12 @@ namespace CritterWorld
         static Object lockObject = new Object();
         static TextBox logWidget = null;
         static string lastMessage = "";
+
+        private static void AddWidgetText(string value)
+        {
+            logWidget.AppendText(DateTime.Now.ToString() + ": " + value);
+            logWidget.AppendText(Environment.NewLine);
+        }
 
         public static void OutputToLog(string value, LogLevel level)
         {
@@ -48,22 +52,24 @@ namespace CritterWorld
                 logger.WriteLine(value);
                 logger.Close();
             }
-            if (!isLogging)
-            {
-                return;
-            }
             if (logWidget != null)
             {
-                logWidget.Text += DateTime.Now.ToString() + ": " + value + "\n";
-                logWidget.ScrollToCaret();
-                logWidget.Refresh();
+                if (logWidget.InvokeRequired)
+                { 
+                    logWidget.Invoke(new MethodInvoker(delegate {
+                        AddWidgetText(value);
+                    }));
+                }
+                else
+                {
+                    AddWidgetText(value);
+                }
             }
         }
 
         public static void SetLogWidget(TextBox textBox)
         {
             logWidget = textBox;
-            logWidget.Text = "";
         }
 
     }

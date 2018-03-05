@@ -246,6 +246,8 @@
             // 
             // panel5
             // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Location = new System.Drawing.Point(2, 2);
@@ -263,7 +265,7 @@
             this.panel6.Location = new System.Drawing.Point(0, 15);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(248, 784);
+            this.panel6.Size = new System.Drawing.Size(250, 800);
             this.panel6.TabIndex = 1;
             // 
             // dataGridViewRunning
@@ -281,7 +283,7 @@
             this.dataGridViewRunning.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewRunning.Name = "dataGridViewRunning";
             this.dataGridViewRunning.ReadOnly = true;
-            this.dataGridViewRunning.Size = new System.Drawing.Size(248, 784);
+            this.dataGridViewRunning.Size = new System.Drawing.Size(250, 800);
             this.dataGridViewRunning.TabIndex = 2;
             // 
             // RunningPicture
@@ -364,6 +366,8 @@
             // 
             this.dataGridViewFinished.AllowUserToAddRows = false;
             this.dataGridViewFinished.AllowUserToDeleteRows = false;
+            this.dataGridViewFinished.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridViewFinished.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewFinished.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FinishedPicture,
@@ -371,7 +375,6 @@
             this.FinishedTimeToGoal,
             this.FinishedAge,
             this.FinishedEnergyDisplay});
-            this.dataGridViewFinished.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewFinished.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewFinished.Name = "dataGridViewFinished";
             this.dataGridViewFinished.ReadOnly = true;
