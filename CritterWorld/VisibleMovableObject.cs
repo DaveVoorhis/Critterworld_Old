@@ -64,6 +64,7 @@ namespace CritterWorld
                         // We have hit another object that blocks us; we'll reset the old position
                         lastTouchingObject = touchingObject;
                     }
+                    Logger.OutputToLog("Bump " + this + " into " + touchingObject, Logger.LogLevel.Message);
                     DoNotifyBumped(touchingObject);
                 }
                 else
@@ -173,7 +174,7 @@ namespace CritterWorld
         {
             return false;
         }
-
+        
         private void DoNotifyBumped(VisibleObject touchingObject)
         {
             SendMessage(new MessageNotifyBumped(touchingObject));

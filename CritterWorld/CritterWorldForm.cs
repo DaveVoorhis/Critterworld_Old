@@ -266,5 +266,9 @@ namespace CritterWorld
             }
         }
 
+        private void dataGridViewRunning_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

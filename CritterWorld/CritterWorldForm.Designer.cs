@@ -44,66 +44,84 @@
             this.selectBackgroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabStats = new System.Windows.Forms.TabControl();
             this.tabPageRunning = new System.Windows.Forms.TabPage();
+            this.tabPageLeaderboard = new System.Windows.Forms.TabPage();
+            this.dataGridViewLeaderboard = new System.Windows.Forms.DataGridView();
+            this.LeaderboardCritterName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LeaderboardCreator = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LeaderboardFinishes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LeaderboardAverageTimeToGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalTimeToGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.dataGridViewRunning = new System.Windows.Forms.DataGridView();
             this.RunningPicture = new System.Windows.Forms.DataGridViewImageColumn();
             this.RunningCritterName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RunningEnergyDisplay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RunningAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RunningTimeToGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageFinished = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.dataGridViewFinished = new System.Windows.Forms.DataGridView();
             this.FinishedPicture = new System.Windows.Forms.DataGridViewImageColumn();
             this.FinishedCritterName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FinishedTimeToGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FinishedAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FinishedEnergyDisplay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageDied = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.dataGridViewDied = new System.Windows.Forms.DataGridView();
             this.DiedPicture = new System.Windows.Forms.DataGridViewImageColumn();
             this.DiedCritterName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiedEnergyDisplay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiedAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiedTimeToGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageWaiting = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewWaiting = new System.Windows.Forms.DataGridView();
             this.WaitingPicture = new System.Windows.Forms.DataGridViewImageColumn();
             this.WaitingCritterName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WaitingEnergyDisplay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WaitingAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WaitingTimeToGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageLeaderboard = new System.Windows.Forms.TabPage();
-            this.dataGridViewLeaderboard = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.marqueeLabel1 = new CritterWorld.MarqueeLabel();
             this.arena = new CritterWorld.WorldPanel();
-            this.LeaderboardCritterName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LeaderboardCreator = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LeaderboardFinishes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LeaderboardAverageTimeToGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalTimeToGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuMain.SuspendLayout();
             this.tabStats.SuspendLayout();
             this.tabPageRunning.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRunning)).BeginInit();
-            this.tabPageFinished.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFinished)).BeginInit();
-            this.tabPageDied.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDied)).BeginInit();
-            this.tabPageWaiting.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWaiting)).BeginInit();
             this.tabPageLeaderboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLeaderboard)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRunning)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFinished)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDied)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWaiting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arena)).BeginInit();
             this.SuspendLayout();
             // 
             // menuMain
             // 
+            this.menuMain.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.worldToolStripMenuItem,
             this.settingsToolStripMenuItem});
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
-            this.menuMain.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuMain.Size = new System.Drawing.Size(1140, 24);
+            this.menuMain.Padding = new System.Windows.Forms.Padding(8, 4, 0, 4);
+            this.menuMain.Size = new System.Drawing.Size(2280, 44);
             this.menuMain.TabIndex = 0;
             this.menuMain.Text = "menuStrip1";
             // 
@@ -119,58 +137,58 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.worldToolStripMenuItem.Name = "worldToolStripMenuItem";
-            this.worldToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.worldToolStripMenuItem.Size = new System.Drawing.Size(90, 36);
             this.worldToolStripMenuItem.Text = "World";
             // 
             // newWorldToolStripMenuItem
             // 
             this.newWorldToolStripMenuItem.Name = "newWorldToolStripMenuItem";
-            this.newWorldToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.newWorldToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
             this.newWorldToolStripMenuItem.Text = "Start World";
             this.newWorldToolStripMenuItem.Click += new System.EventHandler(this.newWorldToolStripMenuItem_Click);
             // 
             // stopWorldToolStripMenuItem
             // 
             this.stopWorldToolStripMenuItem.Name = "stopWorldToolStripMenuItem";
-            this.stopWorldToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.stopWorldToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
             this.stopWorldToolStripMenuItem.Text = "Stop World";
             this.stopWorldToolStripMenuItem.Click += new System.EventHandler(this.stopWorldToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(135, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(274, 6);
             // 
             // startCampaignToolStripMenuItem
             // 
             this.startCampaignToolStripMenuItem.Name = "startCampaignToolStripMenuItem";
-            this.startCampaignToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.startCampaignToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
             this.startCampaignToolStripMenuItem.Text = "Start Campaign";
             this.startCampaignToolStripMenuItem.Click += new System.EventHandler(this.startCampaignToolStripMenuItem_Click);
             // 
             // stopCampaignToolStripMenuItem
             // 
             this.stopCampaignToolStripMenuItem.Name = "stopCampaignToolStripMenuItem";
-            this.stopCampaignToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.stopCampaignToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
             this.stopCampaignToolStripMenuItem.Text = "Stop Campaign";
             this.stopCampaignToolStripMenuItem.Click += new System.EventHandler(this.stopCampaignToolStripMenuItem_Click);
             // 
             // nextLevelToolStripMenuItem
             // 
             this.nextLevelToolStripMenuItem.Name = "nextLevelToolStripMenuItem";
-            this.nextLevelToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.nextLevelToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
             this.nextLevelToolStripMenuItem.Text = "Next level";
             this.nextLevelToolStripMenuItem.Click += new System.EventHandler(this.nextLevelToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(135, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(274, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -180,50 +198,158 @@
             this.loggingToolStripMenuItem,
             this.selectBackgroundToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(113, 36);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // loggingToolStripMenuItem
             // 
             this.loggingToolStripMenuItem.CheckOnClick = true;
             this.loggingToolStripMenuItem.Name = "loggingToolStripMenuItem";
-            this.loggingToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.loggingToolStripMenuItem.Size = new System.Drawing.Size(331, 38);
             this.loggingToolStripMenuItem.Text = "Display Log Window";
             this.loggingToolStripMenuItem.Click += new System.EventHandler(this.loggingToolStripMenuItem_Click);
             // 
             // selectBackgroundToolStripMenuItem
             // 
             this.selectBackgroundToolStripMenuItem.Name = "selectBackgroundToolStripMenuItem";
-            this.selectBackgroundToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.selectBackgroundToolStripMenuItem.Size = new System.Drawing.Size(331, 38);
             this.selectBackgroundToolStripMenuItem.Text = "Edit Configuration...";
             this.selectBackgroundToolStripMenuItem.Click += new System.EventHandler(this.editConfigurationToolStripMenuItem_Click);
             // 
             // tabStats
             // 
-            this.tabStats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabStats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabStats.Controls.Add(this.tabPageRunning);
-            this.tabStats.Controls.Add(this.tabPageFinished);
-            this.tabStats.Controls.Add(this.tabPageDied);
-            this.tabStats.Controls.Add(this.tabPageWaiting);
             this.tabStats.Controls.Add(this.tabPageLeaderboard);
-            this.tabStats.Location = new System.Drawing.Point(13, 35);
+            this.tabStats.Location = new System.Drawing.Point(26, 67);
+            this.tabStats.Margin = new System.Windows.Forms.Padding(6);
             this.tabStats.Name = "tabStats";
             this.tabStats.SelectedIndex = 0;
-            this.tabStats.Size = new System.Drawing.Size(457, 500);
+            this.tabStats.Size = new System.Drawing.Size(914, 1248);
             this.tabStats.TabIndex = 4;
             // 
             // tabPageRunning
             // 
-            this.tabPageRunning.Controls.Add(this.dataGridViewRunning);
-            this.tabPageRunning.Location = new System.Drawing.Point(4, 22);
+            this.tabPageRunning.Controls.Add(this.flowLayoutPanel1);
+            this.tabPageRunning.Location = new System.Drawing.Point(8, 39);
+            this.tabPageRunning.Margin = new System.Windows.Forms.Padding(6);
             this.tabPageRunning.Name = "tabPageRunning";
-            this.tabPageRunning.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRunning.Size = new System.Drawing.Size(449, 474);
+            this.tabPageRunning.Padding = new System.Windows.Forms.Padding(6);
+            this.tabPageRunning.Size = new System.Drawing.Size(898, 1201);
             this.tabPageRunning.TabIndex = 0;
             this.tabPageRunning.Text = "Running";
             this.tabPageRunning.UseVisualStyleBackColor = true;
+            // 
+            // tabPageLeaderboard
+            // 
+            this.tabPageLeaderboard.Controls.Add(this.dataGridViewLeaderboard);
+            this.tabPageLeaderboard.Location = new System.Drawing.Point(8, 39);
+            this.tabPageLeaderboard.Margin = new System.Windows.Forms.Padding(6);
+            this.tabPageLeaderboard.Name = "tabPageLeaderboard";
+            this.tabPageLeaderboard.Padding = new System.Windows.Forms.Padding(6);
+            this.tabPageLeaderboard.Size = new System.Drawing.Size(898, 1201);
+            this.tabPageLeaderboard.TabIndex = 2;
+            this.tabPageLeaderboard.Text = "Leaderboard";
+            this.tabPageLeaderboard.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewLeaderboard
+            // 
+            this.dataGridViewLeaderboard.AllowUserToAddRows = false;
+            this.dataGridViewLeaderboard.AllowUserToDeleteRows = false;
+            this.dataGridViewLeaderboard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLeaderboard.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.LeaderboardCritterName,
+            this.LeaderboardCreator,
+            this.LeaderboardFinishes,
+            this.LeaderboardAverageTimeToGoal,
+            this.TotalTimeToGoal});
+            this.dataGridViewLeaderboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewLeaderboard.Location = new System.Drawing.Point(6, 6);
+            this.dataGridViewLeaderboard.Margin = new System.Windows.Forms.Padding(6);
+            this.dataGridViewLeaderboard.Name = "dataGridViewLeaderboard";
+            this.dataGridViewLeaderboard.ReadOnly = true;
+            this.dataGridViewLeaderboard.Size = new System.Drawing.Size(886, 1189);
+            this.dataGridViewLeaderboard.TabIndex = 0;
+            // 
+            // LeaderboardCritterName
+            // 
+            this.LeaderboardCritterName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.LeaderboardCritterName.DataPropertyName = "CritterName";
+            this.LeaderboardCritterName.HeaderText = "Name";
+            this.LeaderboardCritterName.Name = "LeaderboardCritterName";
+            this.LeaderboardCritterName.ReadOnly = true;
+            this.LeaderboardCritterName.Width = 113;
+            // 
+            // LeaderboardCreator
+            // 
+            this.LeaderboardCreator.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.LeaderboardCreator.DataPropertyName = "Creator";
+            this.LeaderboardCreator.HeaderText = "Creator";
+            this.LeaderboardCreator.Name = "LeaderboardCreator";
+            this.LeaderboardCreator.ReadOnly = true;
+            this.LeaderboardCreator.Width = 128;
+            // 
+            // LeaderboardFinishes
+            // 
+            this.LeaderboardFinishes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.LeaderboardFinishes.DataPropertyName = "Finishes";
+            this.LeaderboardFinishes.HeaderText = "Finishes";
+            this.LeaderboardFinishes.Name = "LeaderboardFinishes";
+            this.LeaderboardFinishes.ReadOnly = true;
+            this.LeaderboardFinishes.Width = 138;
+            // 
+            // LeaderboardAverageTimeToGoal
+            // 
+            this.LeaderboardAverageTimeToGoal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.LeaderboardAverageTimeToGoal.DataPropertyName = "AverageTimeToGoalDisplay";
+            this.LeaderboardAverageTimeToGoal.HeaderText = "Average Time to Goal (Rank)";
+            this.LeaderboardAverageTimeToGoal.Name = "LeaderboardAverageTimeToGoal";
+            this.LeaderboardAverageTimeToGoal.ReadOnly = true;
+            this.LeaderboardAverageTimeToGoal.Width = 202;
+            // 
+            // TotalTimeToGoal
+            // 
+            this.TotalTimeToGoal.DataPropertyName = "TotalTimeToGoal";
+            this.TotalTimeToGoal.HeaderText = "TotalTimeToGoal";
+            this.TotalTimeToGoal.Name = "TotalTimeToGoal";
+            this.TotalTimeToGoal.ReadOnly = true;
+            this.TotalTimeToGoal.Visible = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.Controls.Add(this.panel5);
+            this.flowLayoutPanel1.Controls.Add(this.panel7);
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Controls.Add(this.panel2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(892, 1198);
+            this.flowLayoutPanel1.TabIndex = 10;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1188, 452);
+            this.panel5.TabIndex = 9;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.Controls.Add(this.dataGridViewRunning);
+            this.panel6.Location = new System.Drawing.Point(0, 28);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1185, 421);
+            this.panel6.TabIndex = 1;
             // 
             // dataGridViewRunning
             // 
@@ -237,11 +363,12 @@
             this.RunningAge,
             this.RunningTimeToGoal});
             this.dataGridViewRunning.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewRunning.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewRunning.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewRunning.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridViewRunning.Name = "dataGridViewRunning";
             this.dataGridViewRunning.ReadOnly = true;
-            this.dataGridViewRunning.Size = new System.Drawing.Size(443, 468);
-            this.dataGridViewRunning.TabIndex = 0;
+            this.dataGridViewRunning.Size = new System.Drawing.Size(1185, 421);
+            this.dataGridViewRunning.TabIndex = 2;
             // 
             // RunningPicture
             // 
@@ -277,7 +404,7 @@
             this.RunningAge.HeaderText = "Age";
             this.RunningAge.Name = "RunningAge";
             this.RunningAge.ReadOnly = true;
-            this.RunningAge.Width = 51;
+            this.RunningAge.Width = 95;
             // 
             // RunningTimeToGoal
             // 
@@ -287,16 +414,34 @@
             this.RunningTimeToGoal.ReadOnly = true;
             this.RunningTimeToGoal.Visible = false;
             // 
-            // tabPageFinished
+            // label1
             // 
-            this.tabPageFinished.Controls.Add(this.dataGridViewFinished);
-            this.tabPageFinished.Location = new System.Drawing.Point(4, 22);
-            this.tabPageFinished.Name = "tabPageFinished";
-            this.tabPageFinished.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageFinished.Size = new System.Drawing.Size(449, 474);
-            this.tabPageFinished.TabIndex = 4;
-            this.tabPageFinished.Text = "Finished";
-            this.tabPageFinished.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Running";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Location = new System.Drawing.Point(3, 461);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(634, 342);
+            this.panel7.TabIndex = 10;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.Controls.Add(this.dataGridViewFinished);
+            this.panel8.Location = new System.Drawing.Point(0, 28);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(634, 311);
+            this.panel8.TabIndex = 1;
             // 
             // dataGridViewFinished
             // 
@@ -310,11 +455,12 @@
             this.FinishedAge,
             this.FinishedEnergyDisplay});
             this.dataGridViewFinished.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewFinished.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewFinished.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewFinished.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridViewFinished.Name = "dataGridViewFinished";
             this.dataGridViewFinished.ReadOnly = true;
-            this.dataGridViewFinished.Size = new System.Drawing.Size(443, 468);
-            this.dataGridViewFinished.TabIndex = 0;
+            this.dataGridViewFinished.Size = new System.Drawing.Size(634, 311);
+            this.dataGridViewFinished.TabIndex = 2;
             // 
             // FinishedPicture
             // 
@@ -333,7 +479,7 @@
             this.FinishedCritterName.HeaderText = "Name";
             this.FinishedCritterName.Name = "FinishedCritterName";
             this.FinishedCritterName.ReadOnly = true;
-            this.FinishedCritterName.Width = 60;
+            this.FinishedCritterName.Width = 113;
             // 
             // FinishedTimeToGoal
             // 
@@ -342,7 +488,7 @@
             this.FinishedTimeToGoal.HeaderText = "Time to Goal";
             this.FinishedTimeToGoal.Name = "FinishedTimeToGoal";
             this.FinishedTimeToGoal.ReadOnly = true;
-            this.FinishedTimeToGoal.Width = 92;
+            this.FinishedTimeToGoal.Width = 179;
             // 
             // FinishedAge
             // 
@@ -360,16 +506,34 @@
             this.FinishedEnergyDisplay.ReadOnly = true;
             this.FinishedEnergyDisplay.Visible = false;
             // 
-            // tabPageDied
+            // label2
             // 
-            this.tabPageDied.Controls.Add(this.dataGridViewDied);
-            this.tabPageDied.Location = new System.Drawing.Point(4, 22);
-            this.tabPageDied.Name = "tabPageDied";
-            this.tabPageDied.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDied.Size = new System.Drawing.Size(449, 474);
-            this.tabPageDied.TabIndex = 1;
-            this.tabPageDied.Text = "Died";
-            this.tabPageDied.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Finished";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel9);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(3, 809);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(496, 326);
+            this.panel1.TabIndex = 11;
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.Controls.Add(this.dataGridViewDied);
+            this.panel9.Location = new System.Drawing.Point(0, 31);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(496, 292);
+            this.panel9.TabIndex = 1;
             // 
             // dataGridViewDied
             // 
@@ -383,11 +547,12 @@
             this.DiedAge,
             this.DiedTimeToGoal});
             this.dataGridViewDied.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewDied.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewDied.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewDied.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridViewDied.Name = "dataGridViewDied";
             this.dataGridViewDied.ReadOnly = true;
-            this.dataGridViewDied.Size = new System.Drawing.Size(443, 468);
-            this.dataGridViewDied.TabIndex = 0;
+            this.dataGridViewDied.Size = new System.Drawing.Size(496, 292);
+            this.dataGridViewDied.TabIndex = 2;
             // 
             // DiedPicture
             // 
@@ -408,7 +573,7 @@
             this.DiedCritterName.HeaderText = "Name";
             this.DiedCritterName.Name = "DiedCritterName";
             this.DiedCritterName.ReadOnly = true;
-            this.DiedCritterName.Width = 60;
+            this.DiedCritterName.Width = 113;
             // 
             // DiedEnergyDisplay
             // 
@@ -418,7 +583,7 @@
             this.DiedEnergyDisplay.HeaderText = "Reason";
             this.DiedEnergyDisplay.Name = "DiedEnergyDisplay";
             this.DiedEnergyDisplay.ReadOnly = true;
-            this.DiedEnergyDisplay.Width = 69;
+            this.DiedEnergyDisplay.Width = 131;
             // 
             // DiedAge
             // 
@@ -436,16 +601,34 @@
             this.DiedTimeToGoal.ReadOnly = true;
             this.DiedTimeToGoal.Visible = false;
             // 
-            // tabPageWaiting
+            // label3
             // 
-            this.tabPageWaiting.Controls.Add(this.dataGridViewWaiting);
-            this.tabPageWaiting.Location = new System.Drawing.Point(4, 22);
-            this.tabPageWaiting.Name = "tabPageWaiting";
-            this.tabPageWaiting.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageWaiting.Size = new System.Drawing.Size(449, 474);
-            this.tabPageWaiting.TabIndex = 3;
-            this.tabPageWaiting.Text = "Waiting";
-            this.tabPageWaiting.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(0, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Died";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(3, 1141);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(522, 325);
+            this.panel2.TabIndex = 12;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.dataGridViewWaiting);
+            this.panel3.Location = new System.Drawing.Point(0, 30);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(519, 292);
+            this.panel3.TabIndex = 1;
             // 
             // dataGridViewWaiting
             // 
@@ -459,11 +642,12 @@
             this.WaitingAge,
             this.WaitingTimeToGoal});
             this.dataGridViewWaiting.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewWaiting.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewWaiting.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewWaiting.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridViewWaiting.Name = "dataGridViewWaiting";
             this.dataGridViewWaiting.ReadOnly = true;
-            this.dataGridViewWaiting.Size = new System.Drawing.Size(443, 468);
-            this.dataGridViewWaiting.TabIndex = 0;
+            this.dataGridViewWaiting.Size = new System.Drawing.Size(519, 292);
+            this.dataGridViewWaiting.TabIndex = 2;
             // 
             // WaitingPicture
             // 
@@ -507,47 +691,38 @@
             this.WaitingTimeToGoal.ReadOnly = true;
             this.WaitingTimeToGoal.Visible = false;
             // 
-            // tabPageLeaderboard
+            // label4
             // 
-            this.tabPageLeaderboard.Controls.Add(this.dataGridViewLeaderboard);
-            this.tabPageLeaderboard.Location = new System.Drawing.Point(4, 22);
-            this.tabPageLeaderboard.Name = "tabPageLeaderboard";
-            this.tabPageLeaderboard.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLeaderboard.Size = new System.Drawing.Size(449, 474);
-            this.tabPageLeaderboard.TabIndex = 2;
-            this.tabPageLeaderboard.Text = "Leaderboard";
-            this.tabPageLeaderboard.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(-5, -1);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Waiting";
             // 
-            // dataGridViewLeaderboard
+            // textBox1
             // 
-            this.dataGridViewLeaderboard.AllowUserToAddRows = false;
-            this.dataGridViewLeaderboard.AllowUserToDeleteRows = false;
-            this.dataGridViewLeaderboard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewLeaderboard.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.LeaderboardCritterName,
-            this.LeaderboardCreator,
-            this.LeaderboardFinishes,
-            this.LeaderboardAverageTimeToGoal,
-            this.TotalTimeToGoal});
-            this.dataGridViewLeaderboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewLeaderboard.Location = new System.Drawing.Point(3, 3);
-            this.dataGridViewLeaderboard.Name = "dataGridViewLeaderboard";
-            this.dataGridViewLeaderboard.ReadOnly = true;
-            this.dataGridViewLeaderboard.Size = new System.Drawing.Size(443, 468);
-            this.dataGridViewLeaderboard.TabIndex = 0;
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(963, 1044);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox1.Size = new System.Drawing.Size(1273, 262);
+            this.textBox1.TabIndex = 5;
             // 
             // marqueeLabel1
             // 
-            this.marqueeLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.marqueeLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.marqueeLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.marqueeLabel1.Location = new System.Drawing.Point(0, 543);
-            this.marqueeLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.marqueeLabel1.Location = new System.Drawing.Point(0, 1330);
+            this.marqueeLabel1.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.marqueeLabel1.Name = "marqueeLabel1";
             this.marqueeLabel1.ScrollingEnabled = true;
             this.marqueeLabel1.ScrollPixelAmount = 3;
             this.marqueeLabel1.ScrollTimerInterval = 5;
-            this.marqueeLabel1.Size = new System.Drawing.Size(1140, 41);
+            this.marqueeLabel1.Size = new System.Drawing.Size(2280, 79);
             this.marqueeLabel1.TabIndex = 3;
             // 
             // arena
@@ -556,71 +731,28 @@
             this.arena.BackColor = System.Drawing.SystemColors.Window;
             this.arena.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("arena.BackgroundImage")));
             this.arena.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.arena.Location = new System.Drawing.Point(480, 55);
-            this.arena.Margin = new System.Windows.Forms.Padding(2);
-            this.arena.MaximumSize = new System.Drawing.Size(640, 480);
-            this.arena.MinimumSize = new System.Drawing.Size(640, 480);
+            this.arena.Location = new System.Drawing.Point(960, 106);
+            this.arena.Margin = new System.Windows.Forms.Padding(4);
+            this.arena.MaximumSize = new System.Drawing.Size(1276, 919);
+            this.arena.MinimumSize = new System.Drawing.Size(1276, 919);
             this.arena.Name = "arena";
-            this.arena.Size = new System.Drawing.Size(640, 480);
+            this.arena.Size = new System.Drawing.Size(1276, 919);
             this.arena.TabIndex = 2;
             this.arena.TabStop = false;
             // 
-            // LeaderboardCritterName
-            // 
-            this.LeaderboardCritterName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.LeaderboardCritterName.DataPropertyName = "CritterName";
-            this.LeaderboardCritterName.HeaderText = "Name";
-            this.LeaderboardCritterName.Name = "LeaderboardCritterName";
-            this.LeaderboardCritterName.ReadOnly = true;
-            this.LeaderboardCritterName.Width = 60;
-            // 
-            // LeaderboardCreator
-            // 
-            this.LeaderboardCreator.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.LeaderboardCreator.DataPropertyName = "Creator";
-            this.LeaderboardCreator.HeaderText = "Creator";
-            this.LeaderboardCreator.Name = "LeaderboardCreator";
-            this.LeaderboardCreator.ReadOnly = true;
-            this.LeaderboardCreator.Width = 66;
-            // 
-            // LeaderboardFinishes
-            // 
-            this.LeaderboardFinishes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.LeaderboardFinishes.DataPropertyName = "Finishes";
-            this.LeaderboardFinishes.HeaderText = "Finishes";
-            this.LeaderboardFinishes.Name = "LeaderboardFinishes";
-            this.LeaderboardFinishes.ReadOnly = true;
-            this.LeaderboardFinishes.Width = 70;
-            // 
-            // LeaderboardAverageTimeToGoal
-            // 
-            this.LeaderboardAverageTimeToGoal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.LeaderboardAverageTimeToGoal.DataPropertyName = "AverageTimeToGoalDisplay";
-            this.LeaderboardAverageTimeToGoal.HeaderText = "Average Time to Goal (Rank)";
-            this.LeaderboardAverageTimeToGoal.Name = "LeaderboardAverageTimeToGoal";
-            this.LeaderboardAverageTimeToGoal.ReadOnly = true;
-            this.LeaderboardAverageTimeToGoal.Width = 104;
-            // 
-            // TotalTimeToGoal
-            // 
-            this.TotalTimeToGoal.DataPropertyName = "TotalTimeToGoal";
-            this.TotalTimeToGoal.HeaderText = "TotalTimeToGoal";
-            this.TotalTimeToGoal.Name = "TotalTimeToGoal";
-            this.TotalTimeToGoal.ReadOnly = true;
-            this.TotalTimeToGoal.Visible = false;
-            // 
             // CritterWorldForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1140, 579);
+            this.ClientSize = new System.Drawing.Size(2280, 1399);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tabStats);
             this.Controls.Add(this.marqueeLabel1);
             this.Controls.Add(this.arena);
             this.Controls.Add(this.menuMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuMain;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CritterWorldForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -630,15 +762,25 @@
             this.menuMain.PerformLayout();
             this.tabStats.ResumeLayout(false);
             this.tabPageRunning.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRunning)).EndInit();
-            this.tabPageFinished.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFinished)).EndInit();
-            this.tabPageDied.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDied)).EndInit();
-            this.tabPageWaiting.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWaiting)).EndInit();
             this.tabPageLeaderboard.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLeaderboard)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRunning)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFinished)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDied)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWaiting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arena)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -664,40 +806,51 @@
         private MarqueeLabel marqueeLabel1;
         private System.Windows.Forms.TabControl tabStats;
         private System.Windows.Forms.TabPage tabPageRunning;
-        private System.Windows.Forms.TabPage tabPageDied;
         private System.Windows.Forms.TabPage tabPageLeaderboard;
-        private System.Windows.Forms.TabPage tabPageWaiting;
-        private System.Windows.Forms.DataGridView dataGridViewWaiting;
-        private System.Windows.Forms.DataGridView dataGridViewDied;
         private System.Windows.Forms.DataGridView dataGridViewLeaderboard;
-        private System.Windows.Forms.DataGridView dataGridViewRunning;
-        private System.Windows.Forms.TabPage tabPageFinished;
-        private System.Windows.Forms.DataGridView dataGridViewFinished;
-        private System.Windows.Forms.DataGridViewImageColumn RunningPicture;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RunningCritterName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RunningEnergyDisplay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RunningAge;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RunningTimeToGoal;
-        private System.Windows.Forms.DataGridViewImageColumn FinishedPicture;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FinishedCritterName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FinishedTimeToGoal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FinishedAge;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FinishedEnergyDisplay;
-        private System.Windows.Forms.DataGridViewImageColumn DiedPicture;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiedCritterName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiedEnergyDisplay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiedAge;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiedTimeToGoal;
-        private System.Windows.Forms.DataGridViewImageColumn WaitingPicture;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WaitingCritterName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WaitingEnergyDisplay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WaitingAge;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WaitingTimeToGoal;
         private System.Windows.Forms.DataGridViewTextBoxColumn LeaderboardCritterName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LeaderboardCreator;
         private System.Windows.Forms.DataGridViewTextBoxColumn LeaderboardFinishes;
         private System.Windows.Forms.DataGridViewTextBoxColumn LeaderboardAverageTimeToGoal;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalTimeToGoal;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridView dataGridViewRunning;
+        private System.Windows.Forms.DataGridViewImageColumn RunningPicture;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RunningCritterName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RunningEnergyDisplay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RunningAge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RunningTimeToGoal;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.DataGridView dataGridViewFinished;
+        private System.Windows.Forms.DataGridViewImageColumn FinishedPicture;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FinishedCritterName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FinishedTimeToGoal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FinishedAge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FinishedEnergyDisplay;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.DataGridView dataGridViewDied;
+        private System.Windows.Forms.DataGridViewImageColumn DiedPicture;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiedCritterName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiedEnergyDisplay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiedAge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiedTimeToGoal;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dataGridViewWaiting;
+        private System.Windows.Forms.DataGridViewImageColumn WaitingPicture;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WaitingCritterName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WaitingEnergyDisplay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WaitingAge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WaitingTimeToGoal;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
