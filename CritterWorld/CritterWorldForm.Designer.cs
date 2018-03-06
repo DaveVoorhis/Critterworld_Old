@@ -94,7 +94,7 @@
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
             this.menuMain.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuMain.Size = new System.Drawing.Size(1468, 24);
+            this.menuMain.Size = new System.Drawing.Size(1668, 24);
             this.menuMain.TabIndex = 0;
             this.menuMain.Text = "menuStrip1";
             // 
@@ -189,13 +189,13 @@
             this.marqueeLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.marqueeLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.marqueeLabel1.Location = new System.Drawing.Point(16, 546);
+            this.marqueeLabel1.Location = new System.Drawing.Point(0, 624);
             this.marqueeLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.marqueeLabel1.Name = "marqueeLabel1";
             this.marqueeLabel1.ScrollingEnabled = true;
             this.marqueeLabel1.ScrollPixelAmount = 3;
             this.marqueeLabel1.ScrollTimerInterval = 5;
-            this.marqueeLabel1.Size = new System.Drawing.Size(800, 100);
+            this.marqueeLabel1.Size = new System.Drawing.Size(1668, 43);
             this.marqueeLabel1.TabIndex = 3;
             // 
             // arena
@@ -205,7 +205,7 @@
             this.arena.BackColor = System.Drawing.SystemColors.Window;
             this.arena.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("arena.BackgroundImage")));
             this.arena.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.arena.Location = new System.Drawing.Point(1258, 49);
+            this.arena.Location = new System.Drawing.Point(1017, 47);
             this.arena.Margin = new System.Windows.Forms.Padding(2);
             this.arena.MaximumSize = new System.Drawing.Size(640, 480);
             this.arena.MinimumSize = new System.Drawing.Size(640, 480);
@@ -220,7 +220,7 @@
             this.tabControl1.Location = new System.Drawing.Point(245, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(672, 513);
+            this.tabControl1.Size = new System.Drawing.Size(437, 591);
             this.tabControl1.TabIndex = 15;
             // 
             // tabPage1
@@ -229,7 +229,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(664, 487);
+            this.tabPage1.Size = new System.Drawing.Size(429, 565);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Running";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -256,7 +256,7 @@
             this.dataGridViewRunning.Name = "dataGridViewRunning";
             this.dataGridViewRunning.ReadOnly = true;
             this.dataGridViewRunning.RowTemplate.Height = 33;
-            this.dataGridViewRunning.Size = new System.Drawing.Size(668, 483);
+            this.dataGridViewRunning.Size = new System.Drawing.Size(427, 561);
             this.dataGridViewRunning.TabIndex = 15;
             // 
             // tabControl2
@@ -265,7 +265,7 @@
             this.tabControl2.Location = new System.Drawing.Point(12, 25);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(231, 513);
+            this.tabControl2.Size = new System.Drawing.Size(231, 591);
             this.tabControl2.TabIndex = 16;
             // 
             // tabPage2
@@ -274,7 +274,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(223, 487);
+            this.tabPage2.Size = new System.Drawing.Size(223, 565);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "Waiting";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -294,7 +294,7 @@
             this.dataGridViewWaiting.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewWaiting.Name = "dataGridViewWaiting";
             this.dataGridViewWaiting.ReadOnly = true;
-            this.dataGridViewWaiting.Size = new System.Drawing.Size(217, 481);
+            this.dataGridViewWaiting.Size = new System.Drawing.Size(217, 559);
             this.dataGridViewWaiting.TabIndex = 3;
             // 
             // WaitingPicture
@@ -342,10 +342,10 @@
             // tabControl3
             // 
             this.tabControl3.Controls.Add(this.tabPage3);
-            this.tabControl3.Location = new System.Drawing.Point(919, 25);
+            this.tabControl3.Location = new System.Drawing.Point(684, 25);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(325, 509);
+            this.tabControl3.Size = new System.Drawing.Size(325, 591);
             this.tabControl3.TabIndex = 17;
             // 
             // tabPage3
@@ -354,7 +354,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(317, 483);
+            this.tabPage3.Size = new System.Drawing.Size(317, 565);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Leaderboard";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -374,7 +374,7 @@
             this.dataGridViewLeaderboard.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewLeaderboard.Name = "dataGridViewLeaderboard";
             this.dataGridViewLeaderboard.ReadOnly = true;
-            this.dataGridViewLeaderboard.Size = new System.Drawing.Size(311, 477);
+            this.dataGridViewLeaderboard.Size = new System.Drawing.Size(311, 559);
             this.dataGridViewLeaderboard.TabIndex = 1;
             // 
             // LeaderboardCritterName
@@ -423,10 +423,10 @@
             // 
             // textBoxLog
             // 
-            this.textBoxLog.Location = new System.Drawing.Point(831, 570);
+            this.textBoxLog.Location = new System.Drawing.Point(1017, 532);
             this.textBoxLog.Multiline = true;
             this.textBoxLog.Name = "textBoxLog";
-            this.textBoxLog.Size = new System.Drawing.Size(598, 84);
+            this.textBoxLog.Size = new System.Drawing.Size(639, 84);
             this.textBoxLog.TabIndex = 18;
             // 
             // pictureDataGridViewImageColumn
@@ -484,7 +484,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1468, 666);
+            this.ClientSize = new System.Drawing.Size(1668, 666);
             this.Controls.Add(this.textBoxLog);
             this.Controls.Add(this.tabControl3);
             this.Controls.Add(this.tabControl2);
