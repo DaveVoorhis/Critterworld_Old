@@ -436,6 +436,7 @@ namespace CritterWorld
             waitingCritters.Clear();
             finishedCritters.Clear();
             deadCritters.Clear();
+            newFoodNeeded = Utility.GetConfiguration().FoodDumps;
         }
 
         // Return an enumeration of all objects that are within a specific range of a specific object
