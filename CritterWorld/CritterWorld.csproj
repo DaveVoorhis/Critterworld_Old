@@ -74,9 +74,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Campaign.cs" />
-    <Compile Include="CampaignDefault.cs" />
-    <Compile Include="Competition.cs" />
+    <Compile Include="Campaign\Campaign.cs" />
+    <Compile Include="Campaign\CampaignDefault.cs" />
+    <Compile Include="Campaign\Competition.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="CritterWorldForm.cs">
       <SubType>Form</SubType>
@@ -85,27 +85,27 @@
       <DependentUpon>CritterWorldForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Logger.cs" />
-    <Compile Include="Sprites\AnimationFramesInMultipleFiles.cs" />
-    <Compile Include="Sprites\AnimationFramesInOneFile.cs" />
-    <Compile Include="Sprites\Sprite.cs" />
-    <Compile Include="Sprites\SpriteCollection.cs" />
-    <Compile Include="Sprites\SpriteEnvironment.cs" />
-    <Compile Include="Sprites\SpriteImage.cs" />
-    <Compile Include="Sprites\SpriteImageMultipleFiles.cs" />
-    <Compile Include="Sprites\SpriteImageOneFile.cs" />
+    <Compile Include="Sprite\AnimationFramesInMultipleFiles.cs" />
+    <Compile Include="Sprite\AnimationFramesInOneFile.cs" />
+    <Compile Include="Sprite\Sprite.cs" />
+    <Compile Include="Sprite\SpriteCollection.cs" />
+    <Compile Include="Sprite\SpriteEnvironment.cs" />
+    <Compile Include="Sprite\SpriteImage.cs" />
+    <Compile Include="Sprite\SpriteImageMultipleFiles.cs" />
+    <Compile Include="Sprite\SpriteImageOneFile.cs" />
     <Compile Include="Things\Poop.cs" />
     <Compile Include="Things\Goal.cs" />
     <Compile Include="Leaderboard.cs" />
-    <Compile Include="MarqueeLabel.cs">
+    <Compile Include="Widgets\MarqueeLabel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MarqueeLabel.Designer.cs">
+    <Compile Include="Widgets\MarqueeLabel.Designer.cs">
       <DependentUpon>MarqueeLabel.cs</DependentUpon>
     </Compile>
-    <Compile Include="MessageNotifyBlockedByTerrain.cs" />
-    <Compile Include="MessageNotifyCloseToObject.cs" />
-    <Compile Include="MessageNotifyBumped.cs" />
-    <Compile Include="Message.cs" />
+    <Compile Include="Messages\MessageNotifyBlockedByTerrain.cs" />
+    <Compile Include="Messages\MessageNotifyCloseToObject.cs" />
+    <Compile Include="Messages\MessageNotifyBumped.cs" />
+    <Compile Include="Messages\Message.cs" />
     <Compile Include="Things\Food.cs" />
     <Compile Include="Utility.cs" />
     <Compile Include="Version.cs" />
@@ -114,14 +114,14 @@
     <Compile Include="Things\Critter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WorldPanel.cs">
+    <Compile Include="Widgets\WorldPanel.cs">
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="CritterWorldForm.resx">
       <DependentUpon>CritterWorldForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="MarqueeLabel.resx">
+    <EmbeddedResource Include="Widgets\MarqueeLabel.resx">
       <DependentUpon>MarqueeLabel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -146,8 +146,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="VisibleMovableObject.cs" />
-    <Compile Include="VisibleObject.cs" />
+    <Compile Include="Things\VisibleMovableObject.cs" />
+    <Compile Include="Things\VisibleObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CritterBrainBase\CritterBrainBase.csproj">

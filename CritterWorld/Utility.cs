@@ -11,7 +11,6 @@ namespace CritterWorld
     {
         static Configuration configuration = null;
         static Random random = new Random();
-        
 
         public static Configuration GetConfiguration()
         {
