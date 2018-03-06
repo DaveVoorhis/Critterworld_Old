@@ -24,6 +24,7 @@ namespace CritterWorld
         BindingList<CritterWrapper> runningCritters = null;
         BindingList<CritterWrapper> finishedCritters = null;
         BindingList<CritterWrapper> deadCritters = null;
+        BindingList<CritterWrapper> displayCritters = null;
         List<VisibleObject> allObjects = null;
         int newFoodNeeded;
         Goal goal = null;
@@ -39,6 +40,7 @@ namespace CritterWorld
             runningCritters = new BindingList<CritterWrapper>();
             finishedCritters = new BindingList<CritterWrapper>();
             deadCritters = new BindingList<CritterWrapper>();
+            displayCritters = new BindingList<CritterWrapper>();
             allObjects = new List<VisibleObject>();
             leaderboard = new Leaderboard(HighscoresFileName);
             CreateMap();
@@ -67,6 +69,7 @@ namespace CritterWorld
                 critter.MaximumAge = maximumCritterAge;
                 critterWrapper.Critter = critter;
                 runningCritters.Add(critterWrapper);
+                displayCritters.Add(critterWrapper);
             }
             catch (Exception e)
             {
@@ -168,8 +171,7 @@ namespace CritterWorld
         {
             get
             {
-                // TODO - do this
-                return null;
+                return displayCritters;
             }
         }
 
@@ -326,6 +328,7 @@ namespace CritterWorld
             waitingCritters.Clear();
             finishedCritters.Clear();
             deadCritters.Clear();
+            displayCritters.Clear();
             newFoodNeeded = Utility.GetConfiguration().FoodDumps;
         }
 
@@ -413,7 +416,6 @@ namespace CritterWorld
         public void Shutdown()
         {
             StopWorld();
-            runningCritters.Clear();
         }
 
         private void recordFinishedCritter(CritterWrapper critter)

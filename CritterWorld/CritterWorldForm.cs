@@ -71,18 +71,6 @@ namespace CritterWorld
         private void runningUpdateTimer_Tick(Object myObject, EventArgs myEventArgs)
         {
             dataGridViewRunning.Refresh();
-            if (autoLaunchCompetition)
-            {
-                runningUpdateTimerTickCount++;
-                if (runningUpdateTimerTickCount > 10)
-                {
-                    tabStats.SelectedIndex = (tabStats.SelectedIndex + 1) % tabStats.TabCount;
-                    tabStats.SelectedTab.Refresh();
-                    // no selection in finished
-                    dataGridViewFinished.ClearSelection();
-                    runningUpdateTimerTickCount = 0;
-                }
-            }
         }
 
         private void CritterWorldForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -199,7 +187,7 @@ namespace CritterWorld
             //   dataGridViewDied.DataSource = world.DeadCritters;
             //   dataGridViewFinished.DataSource = world.FinishedCritters;
             //   dataGridViewRunning.DataSource = world.RunningCritters;
-            dataGridViewRunningDiedFinished.DataSource = world.CritterData;
+            dataGridViewRunning.DataSource = world.CritterData;
             dataGridViewWaiting.DataSource = world.WaitingCritters;
             dataGridViewLeaderboard.DataSource = world.Highscores;
         }
@@ -262,6 +250,6 @@ namespace CritterWorld
                 world.MaximumCritterAge = value;
             }
         }
-
+        
     }
 }
