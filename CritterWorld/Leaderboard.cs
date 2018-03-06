@@ -58,7 +58,7 @@ namespace CritterWorld
             {
                 get
                 {
-                    return AverageTimeToGoal.ToString(World.TimeToGoalDisplayFormat);
+                    return AverageTimeToGoal.ToString(CritterWrapper.TimeToGoalDisplayFormat);
                 }
             }
         }

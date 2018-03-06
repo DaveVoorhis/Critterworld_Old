@@ -196,10 +196,11 @@ namespace CritterWorld
             {
                 world.SetGoal(goal);
             }
-            dataGridViewDied.DataSource = world.DeadCritters;
-            dataGridViewFinished.DataSource = world.FinishedCritters;
+            //   dataGridViewDied.DataSource = world.DeadCritters;
+            //   dataGridViewFinished.DataSource = world.FinishedCritters;
+            //   dataGridViewRunning.DataSource = world.RunningCritters;
+            dataGridViewRunningDiedFinished.DataSource = world.CritterData;
             dataGridViewWaiting.DataSource = world.WaitingCritters;
-            dataGridViewRunning.DataSource = world.RunningCritters;
             dataGridViewLeaderboard.DataSource = world.Highscores;
         }
 

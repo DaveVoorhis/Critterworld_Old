@@ -16,124 +16,7 @@ namespace CritterWorld
 {
     public class World
     {
-        public const string TimeToGoalDisplayFormat = @"mm\:ss\.fff";
-
         public const string HighscoresFileName = "highscores.xml";
-
-        public class CritterWrapper
-        {
-            string file;
-            CritterBrainCore brain;
-            Critter critter;
-
-            static Image waitingCritterImage = null;
-
-            internal CritterWrapper(string file, CritterBrainCore brain)
-            {
-                this.file = file;
-                this.brain = brain;
-                critter = null;
-                if (waitingCritterImage == null)
-                {
-                    waitingCritterImage = Utility.GetImageFromResource("CritterWaiting.png");
-                }
-            }
-
-            internal bool IsWaiting
-            {
-                get
-                {
-                    return (critter == null);
-                }
-            }
-
-            internal void Activate(World world)
-            {
-                if (!IsWaiting)
-                    return;
-                try
-                {
-                    Point possibleCritterPosition = world.GetStartingCritterPosition();
-                    critter = Critter.CreateCritter(file, brain, world, possibleCritterPosition);
-                    critter.MaximumAge = world.maximumCritterAge;
-                    world.runningCritters.Add(this);
-                }
-                catch (Exception e)
-                {
-                    Logger.OutputToLog("Critter " + brain.Name + " by " + brain.Creator + " in file " + file + " failed to activate: " + e, Logger.LogLevel.Error);
-                    critter.Die("Crashed");
-                    CritterWorldForm.AddMarqueeMessage(brain.Name + " by " + brain.Creator + " crashed.");
-                }
-            }
-
-            public string CritterName 
-            {
-                get 
-                { 
-                    return brain.Name; 
-                }
-            }
-
-            public int Age 
-            {
-                get
-                {
-                    if (critter != null)
-                    {
-                        return critter.Age;
-                    }
-                    return 0;
-                }
-            }
-
-            public string TimeToGoal
-            {
-                get
-                {
-                    if (critter != null)
-                    {
-                        TimeSpan timeToGoal = critter.TimeToGoal;
-                        if (timeToGoal > TimeSpan.MinValue)
-                        {
-                            return timeToGoal.ToString(TimeToGoalDisplayFormat);
-                        }
-                    }
-                    return "?";
-                }
-            }
-
-            public string EnergyDisplay 
-            {
-                get
-                {
-                    if (critter != null)
-                    {
-                        return critter.EnergyDisplay;
-                    }
-                    return "Waiting";
-                }
-            }
-
-            public Image Picture 
-            {
-                get
-                {
-                    if (critter != null)
-                    {
-                        return critter.Picture;
-                    }
-                    return waitingCritterImage;
-                }
-            }
-
-            internal Critter Critter
-            {
-                get
-                {
-                    return critter;
-                }
-            }
-        }
 
         CritterWorldForm worldForm = null;
         Map map = null;
@@ -170,6 +53,28 @@ namespace CritterWorld
             CleanupDead();
             CheckFoodSupply();
             CheckActiveCritterCount();
+        }
+
+        internal void Activate(CritterWrapper critterWrapper)
+        {
+            if (!critterWrapper.IsWaiting)
+                return;
+            Critter critter = null;
+            try
+            {
+                Point possibleCritterPosition = GetStartingCritterPosition();
+                critter = Critter.CreateCritter(critterWrapper.File, critterWrapper.Brain, this, possibleCritterPosition);
+                critter.MaximumAge = maximumCritterAge;
+                critterWrapper.Critter = critter;
+                runningCritters.Add(critterWrapper);
+            }
+            catch (Exception e)
+            {
+                Logger.OutputToLog("Critter " + critterWrapper.CritterName + " by " + critterWrapper.CritterCreator + " in file " + critterWrapper.File + " failed to activate: " + e, Logger.LogLevel.Error);
+                if (critter != null)
+                    critter.Die("Crashed");
+                CritterWorldForm.AddMarqueeMessage(critterWrapper.CritterName + " by " + critterWrapper.CritterCreator + " crashed.");
+            }
         }
 
         public int ActiveCritterCount
@@ -259,35 +164,20 @@ namespace CritterWorld
             }
         }
 
+        public BindingList<CritterWrapper> CritterData
+        {
+            get
+            {
+                // TODO - do this
+                return null;
+            }
+        }
+
         public BindingList<CritterWrapper> WaitingCritters
         {
             get
             {
                 return waitingCritters;
-            }
-        }
-
-        public BindingList<CritterWrapper> DeadCritters
-        {
-            get
-            {
-                return deadCritters;
-            }
-        }
-
-        public BindingList<CritterWrapper> FinishedCritters
-        {
-            get
-            {
-                return finishedCritters;
-            }
-        }
-
-        public BindingList<CritterWrapper> RunningCritters
-        {
-            get
-            {
-                return runningCritters;
             }
         }
 
@@ -339,7 +229,7 @@ namespace CritterWorld
                         {
                             CritterWrapper critter = waitingCritters[0];
                             waitingCritters.RemoveAt(0);
-                            critter.Activate(this);
+                            Activate(critter);
                         }
                     }
                 }

@@ -84,6 +84,7 @@
     <Compile Include="CritterWorldForm.Designer.cs">
       <DependentUpon>CritterWorldForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CritterWrapper.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Sprite\AnimationFramesInMultipleFiles.cs" />
     <Compile Include="Sprite\AnimationFramesInOneFile.cs" />
@@ -137,6 +138,7 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\World.CritterWrapper.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -196,9 +198,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Images\Background01b.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\DataSources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
