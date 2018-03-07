@@ -6,7 +6,7 @@ using CritterBrainBase;
 
 namespace DemoCritter
 {
-    public class CritterCreator : ICritterFactory2
+    public class CritterCreator : ICritterFactory
     {
         const int totalCritterCount = 5;
         const int critterVarieties = 5;

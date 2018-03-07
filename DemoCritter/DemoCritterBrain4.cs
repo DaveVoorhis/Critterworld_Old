@@ -31,7 +31,6 @@ namespace DemoCritter
             Critter.Move(5);
         }
 
-
         public override void NotifyBlockedByTerrain()
         {
             if (random.Next(0, 4) == 0)

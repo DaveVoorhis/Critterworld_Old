@@ -156,10 +156,6 @@
       <Project>{C9BC9344-AAD7-4EC2-850D-F82C557F7190}</Project>
       <Name>CritterBrainBase</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DemoCritter\DemoCritter.csproj">
-      <Project>{6670A259-8EE4-462F-8321-5827AA328536}</Project>
-      <Name>DemoCritter</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\Robo0_01.png" />

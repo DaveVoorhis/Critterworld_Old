@@ -105,6 +105,8 @@ namespace CritterBrainBase
             }
         }
 
+        public System.Windows.Forms.Form Form { get; set; }
+
         public void NotifyBumped(IWorldObject other)
         {
             if (other is IOtherCritter)

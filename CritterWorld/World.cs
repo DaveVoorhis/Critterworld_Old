@@ -264,7 +264,7 @@ namespace CritterWorld
             StopWorld();
             // Get list of all dll files in same folder as main executable and
             // iterate through them seeing if any of them contain classes that
-            // implement ICritterFactory2.  
+            // implement ICritterFactory.  
             string[] dllFiles = System.IO.Directory.GetFiles(Path.GetDirectoryName(Application.ExecutablePath), "*.dll");
             foreach (string file in dllFiles)
             {
@@ -273,12 +273,12 @@ namespace CritterWorld
                     Assembly assembly = Assembly.LoadFrom(file);
                     foreach (Type type in assembly.GetTypes())
                     {
-                        if (type.IsClass && type.GetInterface("ICritterFactory2") != null)
+                        if (type.IsClass && type.GetInterface("ICritterFactory") != null)
                         {
-                            // ICritterFactory2 is implemented. Get the brains and add them to the list.
+                            // ICritterFactory is implemented. Get the brains and add them to the list.
                             try
                             {
-                                ICritterFactory2 critterFactory = (ICritterFactory2)Activator.CreateInstance(type);
+                                ICritterFactory critterFactory = (ICritterFactory)Activator.CreateInstance(type);
                                 foreach (CritterBrainCore brain in critterFactory.GetCritterBrains())
                                 {
                                     if (brain == null)

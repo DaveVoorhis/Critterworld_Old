@@ -6,7 +6,7 @@ using CritterBrainBase;
 
 namespace CritterBrainBase
 {
-    public interface ICritterFactory2
+    public interface ICritterFactory
     {
         IEnumerable<CritterBrainCore> GetCritterBrains();
     }
