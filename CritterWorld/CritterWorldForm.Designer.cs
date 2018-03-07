@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CritterWorldForm));
             this.menuMain = new System.Windows.Forms.MenuStrip();
             this.worldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,39 +51,39 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridViewRunning = new System.Windows.Forms.DataGridView();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridViewWaiting = new System.Windows.Forms.DataGridView();
-            this.tabControl3 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dataGridViewLeaderboard = new System.Windows.Forms.DataGridView();
-            this.textBoxLog = new System.Windows.Forms.TextBox();
-            this.LeaderboardCritterName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LeaderboardCreator = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LeaderboardFinishes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LeaderboardAverageTimeToGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalTimeToGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.critterNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.critterCreatorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.critterWrapperBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.critterNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.energyDisplayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeToGoalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.critterWrapperBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridViewWaiting = new System.Windows.Forms.DataGridView();
+            this.critterNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.critterCreatorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridViewLeaderboard = new System.Windows.Forms.DataGridView();
+            this.LeaderboardCritterName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LeaderboardCreator = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LeaderboardFinishes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LeaderboardAverageTimeToGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalTimeToGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxLog = new System.Windows.Forms.TextBox();
             this.marqueeLabel1 = new CritterWorld.MarqueeLabel();
             this.arena = new CritterWorld.WorldPanel();
             this.menuMain.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRunning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.critterWrapperBindingSource)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWaiting)).BeginInit();
             this.tabControl3.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLeaderboard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.critterWrapperBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arena)).BeginInit();
             this.SuspendLayout();
             // 
@@ -203,7 +203,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(6);
             this.tabPage1.Size = new System.Drawing.Size(918, 1090);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Running";
+            this.tabPage1.Text = "Running - Double-click to Edit a Critter";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dataGridViewRunning
@@ -232,6 +232,59 @@
             this.dataGridViewRunning.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridViewRunning.Size = new System.Drawing.Size(906, 1078);
             this.dataGridViewRunning.TabIndex = 15;
+            this.dataGridViewRunning.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRunning_CellContentDoubleClick);
+            // 
+            // pictureDataGridViewImageColumn
+            // 
+            this.pictureDataGridViewImageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.pictureDataGridViewImageColumn.DataPropertyName = "Picture";
+            this.pictureDataGridViewImageColumn.HeaderText = "Picture";
+            this.pictureDataGridViewImageColumn.Name = "pictureDataGridViewImageColumn";
+            this.pictureDataGridViewImageColumn.ReadOnly = true;
+            this.pictureDataGridViewImageColumn.Width = 85;
+            // 
+            // critterNameDataGridViewTextBoxColumn
+            // 
+            this.critterNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.critterNameDataGridViewTextBoxColumn.DataPropertyName = "CritterName";
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.critterNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.critterNameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.critterNameDataGridViewTextBoxColumn.Name = "critterNameDataGridViewTextBoxColumn";
+            this.critterNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.critterNameDataGridViewTextBoxColumn.Width = 113;
+            // 
+            // ageDataGridViewTextBoxColumn
+            // 
+            this.ageDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
+            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
+            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
+            this.ageDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ageDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // energyDisplayDataGridViewTextBoxColumn
+            // 
+            this.energyDisplayDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.energyDisplayDataGridViewTextBoxColumn.DataPropertyName = "EnergyDisplay";
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.energyDisplayDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.energyDisplayDataGridViewTextBoxColumn.HeaderText = "Energy/Status";
+            this.energyDisplayDataGridViewTextBoxColumn.Name = "energyDisplayDataGridViewTextBoxColumn";
+            this.energyDisplayDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // timeToGoalDataGridViewTextBoxColumn
+            // 
+            this.timeToGoalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.timeToGoalDataGridViewTextBoxColumn.DataPropertyName = "TimeToGoal";
+            this.timeToGoalDataGridViewTextBoxColumn.HeaderText = "Time to Goal";
+            this.timeToGoalDataGridViewTextBoxColumn.Name = "timeToGoalDataGridViewTextBoxColumn";
+            this.timeToGoalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.timeToGoalDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // critterWrapperBindingSource
+            // 
+            this.critterWrapperBindingSource.DataSource = typeof(CritterWorld.CritterWrapper);
             // 
             // tabControl2
             // 
@@ -283,6 +336,28 @@
             this.dataGridViewWaiting.StandardTab = true;
             this.dataGridViewWaiting.TabIndex = 0;
             // 
+            // critterNameDataGridViewTextBoxColumn1
+            // 
+            this.critterNameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.critterNameDataGridViewTextBoxColumn1.DataPropertyName = "CritterName";
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.critterNameDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.critterNameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.critterNameDataGridViewTextBoxColumn1.Name = "critterNameDataGridViewTextBoxColumn1";
+            this.critterNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.critterNameDataGridViewTextBoxColumn1.Width = 113;
+            // 
+            // critterCreatorDataGridViewTextBoxColumn
+            // 
+            this.critterCreatorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.critterCreatorDataGridViewTextBoxColumn.DataPropertyName = "CritterCreator";
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.critterCreatorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.critterCreatorDataGridViewTextBoxColumn.HeaderText = "Creator";
+            this.critterCreatorDataGridViewTextBoxColumn.Name = "critterCreatorDataGridViewTextBoxColumn";
+            this.critterCreatorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.critterCreatorDataGridViewTextBoxColumn.Width = 128;
+            // 
             // tabControl3
             // 
             this.tabControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -330,17 +405,6 @@
             this.dataGridViewLeaderboard.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridViewLeaderboard.Size = new System.Drawing.Size(622, 1078);
             this.dataGridViewLeaderboard.TabIndex = 1;
-            // 
-            // textBoxLog
-            // 
-            this.textBoxLog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxLog.Location = new System.Drawing.Point(2034, 1023);
-            this.textBoxLog.Margin = new System.Windows.Forms.Padding(6);
-            this.textBoxLog.Multiline = true;
-            this.textBoxLog.Name = "textBoxLog";
-            this.textBoxLog.Size = new System.Drawing.Size(1274, 158);
-            this.textBoxLog.TabIndex = 18;
             // 
             // LeaderboardCritterName
             // 
@@ -390,79 +454,16 @@
             this.TotalTimeToGoal.ReadOnly = true;
             this.TotalTimeToGoal.Visible = false;
             // 
-            // critterNameDataGridViewTextBoxColumn1
+            // textBoxLog
             // 
-            this.critterNameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.critterNameDataGridViewTextBoxColumn1.DataPropertyName = "CritterName";
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.critterNameDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.critterNameDataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.critterNameDataGridViewTextBoxColumn1.Name = "critterNameDataGridViewTextBoxColumn1";
-            this.critterNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.critterNameDataGridViewTextBoxColumn1.Width = 113;
-            // 
-            // critterCreatorDataGridViewTextBoxColumn
-            // 
-            this.critterCreatorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.critterCreatorDataGridViewTextBoxColumn.DataPropertyName = "CritterCreator";
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.critterCreatorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.critterCreatorDataGridViewTextBoxColumn.HeaderText = "Creator";
-            this.critterCreatorDataGridViewTextBoxColumn.Name = "critterCreatorDataGridViewTextBoxColumn";
-            this.critterCreatorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.critterCreatorDataGridViewTextBoxColumn.Width = 128;
-            // 
-            // critterWrapperBindingSource
-            // 
-            this.critterWrapperBindingSource.DataSource = typeof(CritterWorld.CritterWrapper);
-            // 
-            // pictureDataGridViewImageColumn
-            // 
-            this.pictureDataGridViewImageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.pictureDataGridViewImageColumn.DataPropertyName = "Picture";
-            this.pictureDataGridViewImageColumn.HeaderText = "Picture";
-            this.pictureDataGridViewImageColumn.Name = "pictureDataGridViewImageColumn";
-            this.pictureDataGridViewImageColumn.ReadOnly = true;
-            this.pictureDataGridViewImageColumn.Width = 85;
-            // 
-            // critterNameDataGridViewTextBoxColumn
-            // 
-            this.critterNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.critterNameDataGridViewTextBoxColumn.DataPropertyName = "CritterName";
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.critterNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.critterNameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.critterNameDataGridViewTextBoxColumn.Name = "critterNameDataGridViewTextBoxColumn";
-            this.critterNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.critterNameDataGridViewTextBoxColumn.Width = 113;
-            // 
-            // ageDataGridViewTextBoxColumn
-            // 
-            this.ageDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
-            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
-            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
-            this.ageDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ageDataGridViewTextBoxColumn.Width = 95;
-            // 
-            // energyDisplayDataGridViewTextBoxColumn
-            // 
-            this.energyDisplayDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.energyDisplayDataGridViewTextBoxColumn.DataPropertyName = "EnergyDisplay";
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.energyDisplayDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.energyDisplayDataGridViewTextBoxColumn.HeaderText = "Energy/Status";
-            this.energyDisplayDataGridViewTextBoxColumn.Name = "energyDisplayDataGridViewTextBoxColumn";
-            this.energyDisplayDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // timeToGoalDataGridViewTextBoxColumn
-            // 
-            this.timeToGoalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.timeToGoalDataGridViewTextBoxColumn.DataPropertyName = "TimeToGoal";
-            this.timeToGoalDataGridViewTextBoxColumn.HeaderText = "Time to Goal";
-            this.timeToGoalDataGridViewTextBoxColumn.Name = "timeToGoalDataGridViewTextBoxColumn";
-            this.timeToGoalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.timeToGoalDataGridViewTextBoxColumn.Width = 179;
+            this.textBoxLog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxLog.Location = new System.Drawing.Point(2034, 1023);
+            this.textBoxLog.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxLog.Multiline = true;
+            this.textBoxLog.Name = "textBoxLog";
+            this.textBoxLog.Size = new System.Drawing.Size(1274, 158);
+            this.textBoxLog.TabIndex = 18;
             // 
             // marqueeLabel1
             // 
@@ -519,13 +520,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRunning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.critterWrapperBindingSource)).EndInit();
             this.tabControl2.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWaiting)).EndInit();
             this.tabControl3.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLeaderboard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.critterWrapperBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arena)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -253,6 +253,12 @@ namespace CritterWorld
                 world.MaximumCritterAge = value;
             }
         }
-        
+
+        private void dataGridViewRunning_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dataGridViewRunning.Rows[e.RowIndex];
+            CritterWrapper item = (CritterWrapper)row.DataBoundItem;
+            Logger.OutputToLog("*** LAUNCH FORM *** for " + item.CritterName + " by " + item.CritterCreator, Logger.LogLevel.Message);
+        }
     }
 }
