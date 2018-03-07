@@ -372,6 +372,23 @@ namespace CritterWorld
                     CritterWorldForm.AddMarqueeMessage(critterBrain.Name + " by " + critterBrain.Creator + " crashed.");
                 }
             }
+            else if (objectCloseBy is Poop)
+            {
+                try
+                {
+                    critterBrain.NotifyCloseToPoop(objectCloseBy.X, objectCloseBy.Y);
+                }
+                catch (System.Threading.ThreadAbortException)
+                {
+                    // Do nothing
+                }
+                catch (Exception e)
+                {
+                    Logger.OutputToLog("Error in NotifyCloseToPoop from file " + fileContainingBrain + ": Exception is " + e.Message + "\n" + e.StackTrace, Logger.LogLevel.Error);
+                    Die("Crashed");
+                    CritterWorldForm.AddMarqueeMessage(critterBrain.Name + " by " + critterBrain.Creator + " crashed.");
+                }
+            }
         }
 
         public override void NotifyBlockedByTerrain()

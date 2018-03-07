@@ -259,7 +259,10 @@ namespace CritterWorld
             DataGridViewRow row = dataGridViewRunning.Rows[e.RowIndex];
             CritterWrapper item = (CritterWrapper)row.DataBoundItem;
             Form form = item.Brain.Form;
-
+            if (form == null)
+            {
+                MessageBox.Show("Critter " + item.CritterName + " by " + item.CritterCreator + " in file " + item.File + " does not have an edit form.");
+            }
         }
     }
 }

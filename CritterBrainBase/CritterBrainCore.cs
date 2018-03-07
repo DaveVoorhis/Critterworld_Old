@@ -61,6 +61,10 @@ namespace CritterBrainBase
         {
         }
 
+        public virtual void NotifyCloseToPoop(int x, int y)
+        {
+        }
+
         // Non-virtual methods/properties. These are used to hide some of the underlying implementation
         // of CritterWorld.
 
