@@ -62,15 +62,17 @@ namespace CritterWorld
             runningUpdateTimer = new Timer();
             runningUpdateTimer.Interval = 1000;
             runningUpdateTimer.Tick += new EventHandler(runningUpdateTimer_Tick);
+            nextLevelToolStripMenuItem.Enabled = false;
         }
 
         #region EventHandlers
 
-        int runningUpdateTimerTickCount = 0;
-
         private void runningUpdateTimer_Tick(Object myObject, EventArgs myEventArgs)
         {
             dataGridViewRunning.Refresh();
+            dataGridViewRunning.ClearSelection();
+            dataGridViewWaiting.ClearSelection();
+            dataGridViewLeaderboard.ClearSelection();
         }
 
         private void CritterWorldForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -91,6 +93,7 @@ namespace CritterWorld
 
         private void newWorldToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            nextLevelToolStripMenuItem.Enabled = false;
             Start();
         }
 
@@ -123,11 +126,13 @@ namespace CritterWorld
 
         private void startCampaignToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            nextLevelToolStripMenuItem.Enabled = true;
             StartCampaign();
         }
 
         private void stopCampaignToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            nextLevelToolStripMenuItem.Enabled = false;
             StopCampaign();
         }
 
@@ -184,9 +189,6 @@ namespace CritterWorld
             {
                 world.SetGoal(goal);
             }
-            //   dataGridViewDied.DataSource = world.DeadCritters;
-            //   dataGridViewFinished.DataSource = world.FinishedCritters;
-            //   dataGridViewRunning.DataSource = world.RunningCritters;
             dataGridViewRunning.DataSource = world.CritterData;
             dataGridViewWaiting.DataSource = world.WaitingCritters;
             dataGridViewLeaderboard.DataSource = world.Highscores;
