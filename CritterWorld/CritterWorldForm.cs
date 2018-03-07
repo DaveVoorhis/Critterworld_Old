@@ -70,6 +70,7 @@ namespace CritterWorld
         private void runningUpdateTimer_Tick(Object myObject, EventArgs myEventArgs)
         {
             dataGridViewRunning.Refresh();
+            dataGridViewLeaderboard.Refresh();
             dataGridViewRunning.ClearSelection();
             dataGridViewWaiting.ClearSelection();
             dataGridViewLeaderboard.ClearSelection();

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CritterWorldForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CritterWorldForm));
             this.menuMain = new System.Windows.Forms.MenuStrip();
             this.worldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newWorldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,22 +58,21 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridViewLeaderboard = new System.Windows.Forms.DataGridView();
             this.textBoxLog = new System.Windows.Forms.TextBox();
-            this.critterWrapperBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.marqueeLabel1 = new CritterWorld.MarqueeLabel();
-            this.arena = new CritterWorld.WorldPanel();
-            this.pictureDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.critterNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.energyDisplayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeToGoalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureDataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.critterNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.critterCreatorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LeaderboardCritterName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LeaderboardCreator = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LeaderboardFinishes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LeaderboardAverageTimeToGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalTimeToGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.critterNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.critterCreatorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.critterWrapperBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.critterNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.energyDisplayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeToGoalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marqueeLabel1 = new CritterWorld.MarqueeLabel();
+            this.arena = new CritterWorld.WorldPanel();
             this.menuMain.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -188,11 +187,11 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(1150, 50);
+            this.tabControl1.Location = new System.Drawing.Point(1090, 50);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(874, 1137);
+            this.tabControl1.Size = new System.Drawing.Size(934, 1137);
             this.tabControl1.TabIndex = 15;
             // 
             // tabPage1
@@ -202,7 +201,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage1.Size = new System.Drawing.Size(858, 1090);
+            this.tabPage1.Size = new System.Drawing.Size(918, 1090);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Running";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -231,7 +230,7 @@
             this.dataGridViewRunning.RowTemplate.Height = 33;
             this.dataGridViewRunning.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewRunning.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridViewRunning.Size = new System.Drawing.Size(846, 1078);
+            this.dataGridViewRunning.Size = new System.Drawing.Size(906, 1078);
             this.dataGridViewRunning.TabIndex = 15;
             // 
             // tabControl2
@@ -244,7 +243,7 @@
             this.tabControl2.Margin = new System.Windows.Forms.Padding(6);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(483, 1137);
+            this.tabControl2.Size = new System.Drawing.Size(417, 1137);
             this.tabControl2.TabIndex = 16;
             // 
             // tabPage2
@@ -254,7 +253,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage2.Size = new System.Drawing.Size(467, 1090);
+            this.tabPage2.Size = new System.Drawing.Size(401, 1090);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "Waiting";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -267,7 +266,6 @@
             this.dataGridViewWaiting.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridViewWaiting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewWaiting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.pictureDataGridViewImageColumn1,
             this.critterNameDataGridViewTextBoxColumn1,
             this.critterCreatorDataGridViewTextBoxColumn});
             this.dataGridViewWaiting.DataSource = this.critterWrapperBindingSource;
@@ -281,7 +279,7 @@
             this.dataGridViewWaiting.RowTemplate.Height = 33;
             this.dataGridViewWaiting.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewWaiting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridViewWaiting.Size = new System.Drawing.Size(455, 1078);
+            this.dataGridViewWaiting.Size = new System.Drawing.Size(389, 1078);
             this.dataGridViewWaiting.StandardTab = true;
             this.dataGridViewWaiting.TabIndex = 0;
             // 
@@ -344,39 +342,79 @@
             this.textBoxLog.Size = new System.Drawing.Size(1274, 158);
             this.textBoxLog.TabIndex = 18;
             // 
+            // LeaderboardCritterName
+            // 
+            this.LeaderboardCritterName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.LeaderboardCritterName.DataPropertyName = "CritterName";
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LeaderboardCritterName.DefaultCellStyle = dataGridViewCellStyle5;
+            this.LeaderboardCritterName.HeaderText = "Name";
+            this.LeaderboardCritterName.Name = "LeaderboardCritterName";
+            this.LeaderboardCritterName.ReadOnly = true;
+            this.LeaderboardCritterName.Width = 113;
+            // 
+            // LeaderboardCreator
+            // 
+            this.LeaderboardCreator.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.LeaderboardCreator.DataPropertyName = "Creator";
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LeaderboardCreator.DefaultCellStyle = dataGridViewCellStyle6;
+            this.LeaderboardCreator.HeaderText = "Creator";
+            this.LeaderboardCreator.Name = "LeaderboardCreator";
+            this.LeaderboardCreator.ReadOnly = true;
+            this.LeaderboardCreator.Width = 128;
+            // 
+            // LeaderboardFinishes
+            // 
+            this.LeaderboardFinishes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.LeaderboardFinishes.DataPropertyName = "Finishes";
+            this.LeaderboardFinishes.HeaderText = "Finishes";
+            this.LeaderboardFinishes.Name = "LeaderboardFinishes";
+            this.LeaderboardFinishes.ReadOnly = true;
+            this.LeaderboardFinishes.Width = 138;
+            // 
+            // LeaderboardAverageTimeToGoal
+            // 
+            this.LeaderboardAverageTimeToGoal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.LeaderboardAverageTimeToGoal.DataPropertyName = "AverageTimeToGoalDisplay";
+            this.LeaderboardAverageTimeToGoal.HeaderText = "Average Time to Goal (Rank)";
+            this.LeaderboardAverageTimeToGoal.Name = "LeaderboardAverageTimeToGoal";
+            this.LeaderboardAverageTimeToGoal.ReadOnly = true;
+            this.LeaderboardAverageTimeToGoal.Width = 202;
+            // 
+            // TotalTimeToGoal
+            // 
+            this.TotalTimeToGoal.DataPropertyName = "TotalTimeToGoal";
+            this.TotalTimeToGoal.HeaderText = "TotalTimeToGoal";
+            this.TotalTimeToGoal.Name = "TotalTimeToGoal";
+            this.TotalTimeToGoal.ReadOnly = true;
+            this.TotalTimeToGoal.Visible = false;
+            // 
+            // critterNameDataGridViewTextBoxColumn1
+            // 
+            this.critterNameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.critterNameDataGridViewTextBoxColumn1.DataPropertyName = "CritterName";
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.critterNameDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.critterNameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.critterNameDataGridViewTextBoxColumn1.Name = "critterNameDataGridViewTextBoxColumn1";
+            this.critterNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.critterNameDataGridViewTextBoxColumn1.Width = 113;
+            // 
+            // critterCreatorDataGridViewTextBoxColumn
+            // 
+            this.critterCreatorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.critterCreatorDataGridViewTextBoxColumn.DataPropertyName = "CritterCreator";
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.critterCreatorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.critterCreatorDataGridViewTextBoxColumn.HeaderText = "Creator";
+            this.critterCreatorDataGridViewTextBoxColumn.Name = "critterCreatorDataGridViewTextBoxColumn";
+            this.critterCreatorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.critterCreatorDataGridViewTextBoxColumn.Width = 128;
+            // 
             // critterWrapperBindingSource
             // 
             this.critterWrapperBindingSource.DataSource = typeof(CritterWorld.CritterWrapper);
-            // 
-            // marqueeLabel1
-            // 
-            this.marqueeLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.marqueeLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.marqueeLabel1.Location = new System.Drawing.Point(0, 1200);
-            this.marqueeLabel1.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
-            this.marqueeLabel1.Name = "marqueeLabel1";
-            this.marqueeLabel1.ScrollingEnabled = true;
-            this.marqueeLabel1.ScrollPixelAmount = 3;
-            this.marqueeLabel1.ScrollTimerInterval = 5;
-            this.marqueeLabel1.Size = new System.Drawing.Size(3336, 83);
-            this.marqueeLabel1.TabIndex = 3;
-            // 
-            // arena
-            // 
-            this.arena.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.arena.BackColor = System.Drawing.SystemColors.Window;
-            this.arena.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("arena.BackgroundImage")));
-            this.arena.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.arena.Location = new System.Drawing.Point(2034, 90);
-            this.arena.Margin = new System.Windows.Forms.Padding(4);
-            this.arena.MaximumSize = new System.Drawing.Size(1276, 919);
-            this.arena.MinimumSize = new System.Drawing.Size(1276, 919);
-            this.arena.Name = "arena";
-            this.arena.Size = new System.Drawing.Size(1276, 919);
-            this.arena.TabIndex = 2;
-            this.arena.TabStop = false;
             // 
             // pictureDataGridViewImageColumn
             // 
@@ -426,84 +464,35 @@
             this.timeToGoalDataGridViewTextBoxColumn.ReadOnly = true;
             this.timeToGoalDataGridViewTextBoxColumn.Width = 179;
             // 
-            // pictureDataGridViewImageColumn1
+            // marqueeLabel1
             // 
-            this.pictureDataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.pictureDataGridViewImageColumn1.DataPropertyName = "Picture";
-            this.pictureDataGridViewImageColumn1.HeaderText = "Picture";
-            this.pictureDataGridViewImageColumn1.Name = "pictureDataGridViewImageColumn1";
-            this.pictureDataGridViewImageColumn1.ReadOnly = true;
-            this.pictureDataGridViewImageColumn1.Width = 85;
+            this.marqueeLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.marqueeLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.marqueeLabel1.Location = new System.Drawing.Point(0, 1200);
+            this.marqueeLabel1.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
+            this.marqueeLabel1.Name = "marqueeLabel1";
+            this.marqueeLabel1.ScrollingEnabled = true;
+            this.marqueeLabel1.ScrollPixelAmount = 3;
+            this.marqueeLabel1.ScrollTimerInterval = 5;
+            this.marqueeLabel1.Size = new System.Drawing.Size(3336, 83);
+            this.marqueeLabel1.TabIndex = 3;
             // 
-            // critterNameDataGridViewTextBoxColumn1
+            // arena
             // 
-            this.critterNameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.critterNameDataGridViewTextBoxColumn1.DataPropertyName = "CritterName";
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.critterNameDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.critterNameDataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.critterNameDataGridViewTextBoxColumn1.Name = "critterNameDataGridViewTextBoxColumn1";
-            this.critterNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.critterNameDataGridViewTextBoxColumn1.Width = 113;
-            // 
-            // critterCreatorDataGridViewTextBoxColumn
-            // 
-            this.critterCreatorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.critterCreatorDataGridViewTextBoxColumn.DataPropertyName = "CritterCreator";
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.critterCreatorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.critterCreatorDataGridViewTextBoxColumn.HeaderText = "Creator";
-            this.critterCreatorDataGridViewTextBoxColumn.Name = "critterCreatorDataGridViewTextBoxColumn";
-            this.critterCreatorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.critterCreatorDataGridViewTextBoxColumn.Width = 128;
-            // 
-            // LeaderboardCritterName
-            // 
-            this.LeaderboardCritterName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.LeaderboardCritterName.DataPropertyName = "CritterName";
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LeaderboardCritterName.DefaultCellStyle = dataGridViewCellStyle5;
-            this.LeaderboardCritterName.HeaderText = "Name";
-            this.LeaderboardCritterName.Name = "LeaderboardCritterName";
-            this.LeaderboardCritterName.ReadOnly = true;
-            this.LeaderboardCritterName.Width = 113;
-            // 
-            // LeaderboardCreator
-            // 
-            this.LeaderboardCreator.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.LeaderboardCreator.DataPropertyName = "Creator";
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LeaderboardCreator.DefaultCellStyle = dataGridViewCellStyle6;
-            this.LeaderboardCreator.HeaderText = "Creator";
-            this.LeaderboardCreator.Name = "LeaderboardCreator";
-            this.LeaderboardCreator.ReadOnly = true;
-            this.LeaderboardCreator.Width = 128;
-            // 
-            // LeaderboardFinishes
-            // 
-            this.LeaderboardFinishes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.LeaderboardFinishes.DataPropertyName = "Finishes";
-            this.LeaderboardFinishes.HeaderText = "Finishes";
-            this.LeaderboardFinishes.Name = "LeaderboardFinishes";
-            this.LeaderboardFinishes.ReadOnly = true;
-            this.LeaderboardFinishes.Width = 138;
-            // 
-            // LeaderboardAverageTimeToGoal
-            // 
-            this.LeaderboardAverageTimeToGoal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.LeaderboardAverageTimeToGoal.DataPropertyName = "AverageTimeToGoalDisplay";
-            this.LeaderboardAverageTimeToGoal.HeaderText = "Average Time to Goal (Rank)";
-            this.LeaderboardAverageTimeToGoal.Name = "LeaderboardAverageTimeToGoal";
-            this.LeaderboardAverageTimeToGoal.ReadOnly = true;
-            this.LeaderboardAverageTimeToGoal.Width = 202;
-            // 
-            // TotalTimeToGoal
-            // 
-            this.TotalTimeToGoal.DataPropertyName = "TotalTimeToGoal";
-            this.TotalTimeToGoal.HeaderText = "TotalTimeToGoal";
-            this.TotalTimeToGoal.Name = "TotalTimeToGoal";
-            this.TotalTimeToGoal.ReadOnly = true;
-            this.TotalTimeToGoal.Visible = false;
+            this.arena.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arena.BackColor = System.Drawing.SystemColors.Window;
+            this.arena.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("arena.BackgroundImage")));
+            this.arena.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.arena.Location = new System.Drawing.Point(2034, 90);
+            this.arena.Margin = new System.Windows.Forms.Padding(4);
+            this.arena.MaximumSize = new System.Drawing.Size(1276, 919);
+            this.arena.MinimumSize = new System.Drawing.Size(1276, 919);
+            this.arena.Name = "arena";
+            this.arena.Size = new System.Drawing.Size(1276, 919);
+            this.arena.TabIndex = 2;
+            this.arena.TabStop = false;
             // 
             // CritterWorldForm
             // 
@@ -575,14 +564,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn energyDisplayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeToGoalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn pictureDataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn critterNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn critterCreatorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn LeaderboardCritterName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LeaderboardCreator;
         private System.Windows.Forms.DataGridViewTextBoxColumn LeaderboardFinishes;
         private System.Windows.Forms.DataGridViewTextBoxColumn LeaderboardAverageTimeToGoal;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalTimeToGoal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn critterNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn critterCreatorDataGridViewTextBoxColumn;
     }
 }
 
