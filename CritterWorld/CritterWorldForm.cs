@@ -115,14 +115,7 @@ namespace CritterWorld
 
         private void editConfigurationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Code to open a dialog box to edit the configuration options goes here.
-            // Replace the code below
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "Open Background Image";
-            openFileDialog.Filter = "PNG Files|*.png|JPEG Files|*.jpg|All Files|*.*";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-                SetBackground(openFileDialog.FileName);
-
+            Utility.GetConfiguration().EditConfiguration();
         }
 
         private void startCampaignToolStripMenuItem_Click(object sender, EventArgs e)

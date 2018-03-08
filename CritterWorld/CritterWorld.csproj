@@ -77,7 +77,13 @@
     <Compile Include="Campaign\Campaign.cs" />
     <Compile Include="Campaign\CampaignDefault.cs" />
     <Compile Include="Campaign\Competition.cs" />
-    <Compile Include="Configuration.cs" />
+    <Compile Include="Configuration\ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration\ConfigForm.Designer.cs">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Configuration.cs" />
     <Compile Include="CritterWorldForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     <Compile Include="Widgets\WorldPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Configuration\ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CritterWorldForm.resx">
       <DependentUpon>CritterWorldForm.cs</DependentUpon>
       <SubType>Designer</SubType>

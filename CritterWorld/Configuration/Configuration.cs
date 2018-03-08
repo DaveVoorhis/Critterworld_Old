@@ -2,22 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace CritterWorld
 {
     public class Configuration
     {
         int foodDumps;
-        int energyPerFoodDump;
         int foodDecayTime;
         int poopEvaporateTime;
         bool autoNewFoodDump;
-        int critterEndurance;
-        int critterEnergyPerFeed;
-        int critterEnergyPerDefilement;
+        int critterEnergyGainedPerFeed;
+        int critterEnergyLostPerDefilement;
         int critterEnergyWhenBorn;
         string worldFileName;
-        int refreshRate;
 
         public Configuration()
         {
@@ -26,21 +24,26 @@ namespace CritterWorld
 
         public void EditConfiguration()
         {
+            // Code to open a dialog box to edit the configuration options goes here.
+            // Replace the code below
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Open Background Image";
+            openFileDialog.Filter = "PNG Files|*.png|JPEG Files|*.jpg|All Files|*.*";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+                worldFileName = openFileDialog.FileName;
+
         }
 
         public void ResetToBuiltInDefaults()
         {
             foodDumps = 6;
-            energyPerFoodDump = 30;
             foodDecayTime = 30;
             poopEvaporateTime = 10;
             autoNewFoodDump = true;
-            critterEndurance = 1000;
-            critterEnergyPerFeed = 10;
-            critterEnergyPerDefilement = 20;
+            critterEnergyGainedPerFeed = 10;
+            critterEnergyLostPerDefilement = 20;
             critterEnergyWhenBorn = 50;
             worldFileName = "BackgroundBase.png";
-            refreshRate = 12;
         }
 
         public int FoodDumps 
@@ -60,25 +63,6 @@ namespace CritterWorld
                     foodDumps = value;
                 }
             } 
-        }
-
-        public int EnergyPerFoodDump
-        {
-            get
-            {
-                return energyPerFoodDump;
-            }
-            set
-            {
-                if (value < 0)
-                {
-                    throw new Exception("Invalid value for energy per food dump: " + value.ToString());
-                }
-                else
-                {
-                    energyPerFoodDump = value;
-                }
-            }
         }
 
         public bool AutoNewFoodDump 
@@ -131,25 +115,6 @@ namespace CritterWorld
             }
         }
 
-        public int CritterEndurance
-        {
-            get
-            {
-                return critterEndurance;
-            }
-            set
-            {
-                if (value < 0)
-                {
-                    throw new Exception("Invalid value for critter endurance: " + value.ToString());
-                }
-                else
-                {
-                    critterEndurance = value;
-                }
-            }
-        }
-
         public int CritterEnergyWhenBorn
         {
             get
@@ -173,7 +138,7 @@ namespace CritterWorld
         {
             get
             {
-                return critterEnergyPerFeed;
+                return critterEnergyGainedPerFeed;
             }
             set
             {
@@ -183,7 +148,7 @@ namespace CritterWorld
                 }
                 else
                 {
-                    critterEnergyPerFeed = value;
+                    critterEnergyGainedPerFeed = value;
                 }
             }
         }
@@ -191,7 +156,7 @@ namespace CritterWorld
         {
             get
             {
-                return critterEnergyPerDefilement;
+                return critterEnergyLostPerDefilement;
             }
             set
             {
@@ -201,7 +166,7 @@ namespace CritterWorld
                 }
                 else
                 {
-                    critterEnergyPerDefilement = value;
+                    critterEnergyLostPerDefilement = value;
                 }
             }
         }
@@ -216,27 +181,7 @@ namespace CritterWorld
             {
                 worldFileName = value;
             }
-        }
-
-        public int RefreshRate 
-        {
-            get
-            {
-                return refreshRate;
-            }
-            set
-            {
-                if (value < 5 || value > 60)
-                {
-                    throw new Exception("Invalid refresh rate: " + value.ToString());
-                }
-                else
-                {
-                    refreshRate = value;
-                }
-            } 
-        }
-        
+        }        
         
     }
 }
