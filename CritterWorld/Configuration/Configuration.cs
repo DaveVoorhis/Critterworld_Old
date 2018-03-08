@@ -146,6 +146,7 @@ namespace CritterWorld
                 }
             }
         }
+
         public int CritterEnergyPerDefilement
         {
             get

@@ -58,7 +58,8 @@ namespace CritterWorld
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Unable to update configuration due to error: " + exception.Message);
+                MessageBox.Show("Unable to update configuration due to error: " + exception.Message,
+                    "Configuration Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -254,7 +254,8 @@ namespace CritterWorld
             Form form = item.Brain.Form;
             if (form == null)
             {
-                MessageBox.Show("Critter " + item.CritterName + " by " + item.CritterCreator + " in file " + item.File + " does not have an edit form.");
+                string msg = "Critter " + item.CritterName + " by " + item.CritterCreator + " in file " + item.File + " does not have an edit form.";
+                MessageBox.Show(msg, "Edit Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
