@@ -24,14 +24,8 @@ namespace CritterWorld
 
         public void EditConfiguration()
         {
-            // Code to open a dialog box to edit the configuration options goes here.
-            // Replace the code below
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "Open Background Image";
-            openFileDialog.Filter = "PNG Files|*.png|JPEG Files|*.jpg|All Files|*.*";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-                worldFileName = openFileDialog.FileName;
-
+            ConfigForm configForm = new ConfigForm(this);
+            configForm.ShowDialog();
         }
 
         public void ResetToBuiltInDefaults()
