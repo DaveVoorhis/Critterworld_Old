@@ -11,11 +11,9 @@ namespace CritterWorld
         int foodDumps;
         int foodDecayTime;
         int poopEvaporateTime;
-        bool autoNewFoodDump;
         int critterEnergyGainedPerFeed;
         int critterEnergyLostPerDefilement;
         int critterEnergyWhenBorn;
-        string worldFileName;
 
         public Configuration()
         {
@@ -33,11 +31,11 @@ namespace CritterWorld
             foodDumps = 6;
             foodDecayTime = 30;
             poopEvaporateTime = 10;
-            autoNewFoodDump = true;
+            AutoNewFoodDump = true;
             critterEnergyGainedPerFeed = 10;
             critterEnergyLostPerDefilement = 20;
             critterEnergyWhenBorn = 50;
-            worldFileName = "BackgroundBase.png";
+            WorldFileName = "BackgroundBase.png";
         }
 
         public int FoodDumps 
@@ -59,17 +57,7 @@ namespace CritterWorld
             } 
         }
 
-        public bool AutoNewFoodDump 
-        {
-            get
-            {
-                return autoNewFoodDump;
-            }
-            set
-            {
-                autoNewFoodDump = value;
-            }
-        }
+        public bool AutoNewFoodDump { get; set; }
 
         public int FoodDecayTime
         {
@@ -166,17 +154,7 @@ namespace CritterWorld
             }
         }
 
-        public string WorldFileName
-        {
-            get
-            {
-                return worldFileName;
-            }
-            set
-            {
-                worldFileName = value;
-            }
-        }        
-        
+        public string WorldFileName { get; set; }
+
     }
 }
