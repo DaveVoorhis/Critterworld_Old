@@ -4,19 +4,62 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using Sprites;
+using System.Xml.Serialization;
+using System.IO;
+using System.ComponentModel;
 
 namespace CritterWorld
 {
     public class Utility
     {
+        const string fileName = "configuration.xml";
+
         static Configuration configuration = null;
         static Random random = new Random();
+
+        private static void LoadConfiguration()
+        {
+            try
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(Configuration));
+                TextReader reader = new StreamReader(fileName);
+                configuration = (Configuration)serializer.Deserialize(reader);
+                reader.Close();
+            }
+            catch (FileNotFoundException)
+            {
+                Logger.OutputToLog("Saved configuration file not found. It will be created automatically.", Logger.LogLevel.Message);
+            }
+            catch (Exception exception)
+            {
+                Logger.OutputToLog("Unable to load configuration: " + exception, Logger.LogLevel.Error);
+            }
+        }
+
+        public static void SaveConfiguration()
+        {
+            try
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(Configuration));
+                TextWriter writer = new StreamWriter(fileName);
+                serializer.Serialize(writer, configuration);
+                writer.Close();
+            }
+            catch (Exception exception)
+            {
+                Logger.OutputToLog("Unable to save configuration: " + exception, Logger.LogLevel.Error);
+            }
+        }
 
         public static Configuration GetConfiguration()
         {
             if (configuration == null)
             {
-                configuration = new Configuration();
+                LoadConfiguration();
+                if (configuration == null)
+                {
+                    configuration = new Configuration();
+                }
             }
             return configuration;
         }

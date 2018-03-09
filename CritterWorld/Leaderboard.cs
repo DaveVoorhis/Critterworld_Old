@@ -86,6 +86,10 @@ namespace CritterWorld
                 highscores = (BindingList<LeaderInfo>)serializer.Deserialize(reader);
                 reader.Close();
             }
+            catch (FileNotFoundException)
+            {
+                Logger.OutputToLog("High scores file not found. It will be created automatically.", Logger.LogLevel.Message);
+            }
             catch (Exception exception)
             {
                 Logger.OutputToLog("Unable to load high scores: " + exception, Logger.LogLevel.Error);

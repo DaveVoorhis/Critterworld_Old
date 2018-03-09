@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace CritterWorld
 {
@@ -42,18 +43,29 @@ namespace CritterWorld
                 textBoxBackgroundImage.Text = openFileDialog.FileName;
         }
 
+        private int AttemptStringToInt(string text, string identification)
+        {
+            int value;
+            if (int.TryParse(text, out value))
+            {
+                return value;
+            }
+            throw new Exception(identification + " Value must be a number.");
+        }
+
         private void okButton_Click(object sender, EventArgs e)
         {
             try
             {
-                configuration.FoodDumps = int.Parse(textBoxFoodPerReplenish.Text);
+                configuration.FoodDumps = AttemptStringToInt(textBoxFoodPerReplenish.Text, labelFoodPerReplenishment.Text);
                 configuration.AutoNewFoodDump = checkBoxAutoFood.Checked;
-                configuration.CritterEnergyPerFeed = int.Parse(textBoxEnergyPerFood.Text);
-                configuration.CritterEnergyPerDefilement = int.Parse(textBoxEnergyPerPoop.Text);
-                configuration.CritterEnergyWhenBorn = int.Parse(textBoxInitialEnergy.Text);
-                configuration.FoodDecayTime = int.Parse(textBoxTimeToFoodVanish.Text);
-                configuration.PoopEvaporateTime = int.Parse(textBoxTimeToPoopVanish.Text);
+                configuration.CritterEnergyPerFeed = AttemptStringToInt(textBoxEnergyPerFood.Text, labelEnergyGainedPerFood.Text);
+                configuration.CritterEnergyPerDefilement = AttemptStringToInt(textBoxEnergyPerPoop.Text, labelEnergyLostPerPoopStepped.Text);
+                configuration.CritterEnergyWhenBorn = AttemptStringToInt(textBoxInitialEnergy.Text, labelInitialEnergy.Text);
+                configuration.FoodDecayTime = AttemptStringToInt(textBoxTimeToFoodVanish.Text, labelTimeTilFoodVanish.Text);
+                configuration.PoopEvaporateTime = AttemptStringToInt(textBoxTimeToPoopVanish.Text, labelTimeTilPoopVanish.Text);
                 configuration.WorldFileName = textBoxBackgroundImage.Text;
+                Utility.SaveConfiguration();
                 Close();
             }
             catch (Exception exception)
