@@ -61,6 +61,7 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -71,6 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DemoCritterBrain1ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoCritterBrain1ConfigForm.Designer.cs">
+      <DependentUpon>DemoCritterBrain1ConfigForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DemoCritterBrain5.cs" />
     <Compile Include="DemoCritterBrain1.cs" />
     <Compile Include="DemoCritterBrain2.cs" />
@@ -88,6 +95,9 @@
   <ItemGroup>
     <EmbeddedResource Include="demo4_1.png" />
     <EmbeddedResource Include="demo4_2.png" />
+    <EmbeddedResource Include="DemoCritterBrain1ConfigForm.resx">
+      <DependentUpon>DemoCritterBrain1ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

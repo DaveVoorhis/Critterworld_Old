@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Drawing;
-using System.Threading;
+using System.Windows.Forms;
 using CritterBrainBase;
 
 namespace DemoCritter
@@ -13,6 +9,7 @@ namespace DemoCritter
         Random random = new Random();
         DateTime lastMovementTime;
         int randomIntervalInSeconds;
+        int nominalSpeed = 10;
 
         public DemoCritterBrain1() : base("Drunkard", "Wayne & Dave")
         {
@@ -23,10 +20,33 @@ namespace DemoCritter
             DoRandomDirection();
         }
 
+        public override Form Form {
+            get
+            {
+                return new DemoCritterBrain1ConfigForm(this);
+            }
+        }
+
+        public int Speed
+        {
+            get
+            {
+                return nominalSpeed;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("Speed must be greater than or equal to zero.");
+                }
+                nominalSpeed = value;
+            }
+        }
+
         private void DoRandomDirection() 
         {
             Critter.Direction = random.Next(0, 360);
-            Critter.Move(10);
+            Critter.Move(nominalSpeed);
             lastMovementTime = DateTime.Now;
             randomIntervalInSeconds = random.Next(1, 5);
         }
@@ -43,13 +63,13 @@ namespace DemoCritter
         public override void NotifyBlockedByTerrain()
         {
             Critter.Direction = Critter.Direction - 10;
-            Critter.Move(10);
+            Critter.Move(nominalSpeed);
         }
 
         public override void NotifyBumpedCritter(OtherCritter other)
         {
             Critter.Direction = Critter.Direction + 180;
-            Critter.Move(10);
+            Critter.Move(nominalSpeed);
         }
 
         public override void NotifyCloseToFood(int x, int y)

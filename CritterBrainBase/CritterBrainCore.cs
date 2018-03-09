@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace CritterBrainBase
 {
@@ -109,7 +110,7 @@ namespace CritterBrainBase
             }
         }
 
-        public System.Windows.Forms.Form Form { get; set; }
+        public virtual Form Form { get; }
 
         public void NotifyBumped(IWorldObject other)
         {

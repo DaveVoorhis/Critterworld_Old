@@ -257,6 +257,10 @@ namespace CritterWorld
                 string msg = "Critter " + item.CritterName + " by " + item.CritterCreator + " in file " + item.File + " does not have an edit form.";
                 MessageBox.Show(msg, "Edit Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+            {
+                form.ShowDialog();
+            }
         }
     }
 }
