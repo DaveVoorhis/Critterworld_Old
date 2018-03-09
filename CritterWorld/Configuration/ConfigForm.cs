@@ -32,15 +32,27 @@ namespace CritterWorld
             textBoxTimeToFoodVanish.Text = configuration.FoodDecayTime.ToString();
             textBoxTimeToPoopVanish.Text = configuration.PoopEvaporateTime.ToString();
             textBoxBackgroundImage.Text = configuration.WorldFileName;
+            textBoxBrainDLLDirectory.Text = configuration.BrainDLLPath;
         }
 
         private void openBackgroundImage_Click(object sender, EventArgs e)
         {
-            openFileDialog.Title = "Open Background Image";
-            openFileDialog.Filter = "PNG Files|*.png|JPEG Files|*.jpg|All Files|*.*";
-            openFileDialog.FileName = textBoxBackgroundImage.Text;
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-                textBoxBackgroundImage.Text = openFileDialog.FileName;
+            openBackgroundFileDialog.Title = "Open Background Image";
+            openBackgroundFileDialog.Filter = "PNG Files|*.png|JPEG Files|*.jpg|All Files|*.*";
+            openBackgroundFileDialog.FileName = textBoxBackgroundImage.Text;
+            if (openBackgroundFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxBackgroundImage.Text = openBackgroundFileDialog.FileName;
+            }
+        }
+
+        private void buttonBrainDLLDirectory_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialog.Description = "Critter Brain DLL Directory";
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxBrainDLLDirectory.Text = folderBrowserDialog.SelectedPath;
+            }
         }
 
         private int AttemptStringToInt(string text, string identification)
@@ -65,6 +77,7 @@ namespace CritterWorld
                 configuration.FoodDecayTime = AttemptStringToInt(textBoxTimeToFoodVanish.Text, labelTimeTilFoodVanish.Text);
                 configuration.PoopEvaporateTime = AttemptStringToInt(textBoxTimeToPoopVanish.Text, labelTimeTilPoopVanish.Text);
                 configuration.WorldFileName = textBoxBackgroundImage.Text;
+                configuration.BrainDLLPath = textBoxBrainDLLDirectory.Text;
                 Utility.SaveConfiguration();
                 Close();
             }

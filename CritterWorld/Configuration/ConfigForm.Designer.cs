@@ -42,12 +42,16 @@
             this.textBoxInitialEnergy = new System.Windows.Forms.TextBox();
             this.textBoxTimeToFoodVanish = new System.Windows.Forms.TextBox();
             this.textBoxTimeToPoopVanish = new System.Windows.Forms.TextBox();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.openBackgroundFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.textBoxBackgroundImage = new System.Windows.Forms.TextBox();
             this.openBackgroundImage = new System.Windows.Forms.Button();
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
+            this.buttonBrainDLLDirectory = new System.Windows.Forms.Button();
+            this.textBoxBrainDLLDirectory = new System.Windows.Forms.TextBox();
+            this.labelDLLDir = new System.Windows.Forms.Label();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
             // labelFoodPerReplenishment
@@ -94,7 +98,7 @@
             // 
             this.checkBoxAutoFood.AutoSize = true;
             this.checkBoxAutoFood.Location = new System.Drawing.Point(700, 21);
-            this.checkBoxAutoFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxAutoFood.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxAutoFood.Name = "checkBoxAutoFood";
             this.checkBoxAutoFood.Size = new System.Drawing.Size(320, 29);
             this.checkBoxAutoFood.TabIndex = 2;
@@ -134,7 +138,7 @@
             // textBoxFoodPerReplenish
             // 
             this.textBoxFoodPerReplenish.Location = new System.Drawing.Point(428, 24);
-            this.textBoxFoodPerReplenish.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxFoodPerReplenish.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFoodPerReplenish.Name = "textBoxFoodPerReplenish";
             this.textBoxFoodPerReplenish.Size = new System.Drawing.Size(132, 31);
             this.textBoxFoodPerReplenish.TabIndex = 1;
@@ -142,7 +146,7 @@
             // textBoxEnergyPerFood
             // 
             this.textBoxEnergyPerFood.Location = new System.Drawing.Point(428, 70);
-            this.textBoxEnergyPerFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxEnergyPerFood.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEnergyPerFood.Name = "textBoxEnergyPerFood";
             this.textBoxEnergyPerFood.Size = new System.Drawing.Size(132, 31);
             this.textBoxEnergyPerFood.TabIndex = 3;
@@ -150,7 +154,7 @@
             // textBoxEnergyPerPoop
             // 
             this.textBoxEnergyPerPoop.Location = new System.Drawing.Point(428, 116);
-            this.textBoxEnergyPerPoop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxEnergyPerPoop.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEnergyPerPoop.Name = "textBoxEnergyPerPoop";
             this.textBoxEnergyPerPoop.Size = new System.Drawing.Size(132, 31);
             this.textBoxEnergyPerPoop.TabIndex = 4;
@@ -158,7 +162,7 @@
             // textBoxInitialEnergy
             // 
             this.textBoxInitialEnergy.Location = new System.Drawing.Point(428, 163);
-            this.textBoxInitialEnergy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxInitialEnergy.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxInitialEnergy.Name = "textBoxInitialEnergy";
             this.textBoxInitialEnergy.Size = new System.Drawing.Size(132, 31);
             this.textBoxInitialEnergy.TabIndex = 5;
@@ -166,7 +170,7 @@
             // textBoxTimeToFoodVanish
             // 
             this.textBoxTimeToFoodVanish.Location = new System.Drawing.Point(428, 209);
-            this.textBoxTimeToFoodVanish.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTimeToFoodVanish.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTimeToFoodVanish.Name = "textBoxTimeToFoodVanish";
             this.textBoxTimeToFoodVanish.Size = new System.Drawing.Size(132, 31);
             this.textBoxTimeToFoodVanish.TabIndex = 6;
@@ -174,19 +178,19 @@
             // textBoxTimeToPoopVanish
             // 
             this.textBoxTimeToPoopVanish.Location = new System.Drawing.Point(428, 255);
-            this.textBoxTimeToPoopVanish.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTimeToPoopVanish.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTimeToPoopVanish.Name = "textBoxTimeToPoopVanish";
             this.textBoxTimeToPoopVanish.Size = new System.Drawing.Size(132, 31);
             this.textBoxTimeToPoopVanish.TabIndex = 7;
             // 
-            // openFileDialog
+            // openBackgroundFileDialog
             // 
-            this.openFileDialog.FileName = "openFileDialog1";
+            this.openBackgroundFileDialog.FileName = "openFileDialog1";
             // 
             // textBoxBackgroundImage
             // 
             this.textBoxBackgroundImage.Location = new System.Drawing.Point(232, 300);
-            this.textBoxBackgroundImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxBackgroundImage.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxBackgroundImage.Name = "textBoxBackgroundImage";
             this.textBoxBackgroundImage.Size = new System.Drawing.Size(946, 31);
             this.textBoxBackgroundImage.TabIndex = 8;
@@ -194,7 +198,7 @@
             // openBackgroundImage
             // 
             this.openBackgroundImage.Location = new System.Drawing.Point(1184, 300);
-            this.openBackgroundImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.openBackgroundImage.Margin = new System.Windows.Forms.Padding(4);
             this.openBackgroundImage.Name = "openBackgroundImage";
             this.openBackgroundImage.Size = new System.Drawing.Size(44, 38);
             this.openBackgroundImage.TabIndex = 15;
@@ -204,8 +208,8 @@
             // 
             // okButton
             // 
-            this.okButton.Location = new System.Drawing.Point(38, 365);
-            this.okButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.okButton.Location = new System.Drawing.Point(38, 437);
+            this.okButton.Margin = new System.Windows.Forms.Padding(4);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(96, 58);
             this.okButton.TabIndex = 0;
@@ -215,8 +219,8 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(140, 365);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelButton.Location = new System.Drawing.Point(140, 437);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(96, 58);
             this.cancelButton.TabIndex = 10;
@@ -226,8 +230,8 @@
             // 
             // buttonReset
             // 
-            this.buttonReset.Location = new System.Drawing.Point(1024, 373);
-            this.buttonReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonReset.Location = new System.Drawing.Point(1024, 445);
+            this.buttonReset.Margin = new System.Windows.Forms.Padding(4);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(204, 58);
             this.buttonReset.TabIndex = 16;
@@ -235,11 +239,43 @@
             this.buttonReset.UseVisualStyleBackColor = true;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
+            // buttonBrainDLLDirectory
+            // 
+            this.buttonBrainDLLDirectory.Location = new System.Drawing.Point(1184, 359);
+            this.buttonBrainDLLDirectory.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBrainDLLDirectory.Name = "buttonBrainDLLDirectory";
+            this.buttonBrainDLLDirectory.Size = new System.Drawing.Size(44, 38);
+            this.buttonBrainDLLDirectory.TabIndex = 19;
+            this.buttonBrainDLLDirectory.Text = "?";
+            this.buttonBrainDLLDirectory.UseVisualStyleBackColor = true;
+            this.buttonBrainDLLDirectory.Click += new System.EventHandler(this.buttonBrainDLLDirectory_Click);
+            // 
+            // textBoxBrainDLLDirectory
+            // 
+            this.textBoxBrainDLLDirectory.Location = new System.Drawing.Point(232, 359);
+            this.textBoxBrainDLLDirectory.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxBrainDLLDirectory.Name = "textBoxBrainDLLDirectory";
+            this.textBoxBrainDLLDirectory.Size = new System.Drawing.Size(946, 31);
+            this.textBoxBrainDLLDirectory.TabIndex = 18;
+            // 
+            // labelDLLDir
+            // 
+            this.labelDLLDir.AutoSize = true;
+            this.labelDLLDir.Location = new System.Drawing.Point(28, 363);
+            this.labelDLLDir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDLLDir.Name = "labelDLLDir";
+            this.labelDLLDir.Size = new System.Drawing.Size(202, 25);
+            this.labelDLLDir.TabIndex = 17;
+            this.labelDLLDir.Text = "Brain DLL directory:";
+            // 
             // ConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 452);
+            this.ClientSize = new System.Drawing.Size(1258, 532);
+            this.Controls.Add(this.buttonBrainDLLDirectory);
+            this.Controls.Add(this.textBoxBrainDLLDirectory);
+            this.Controls.Add(this.labelDLLDir);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
@@ -260,7 +296,7 @@
             this.Controls.Add(this.labelEnergyGainedPerFood);
             this.Controls.Add(this.labelFoodPerReplenishment);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ConfigForm";
@@ -287,11 +323,15 @@
         private System.Windows.Forms.TextBox textBoxInitialEnergy;
         private System.Windows.Forms.TextBox textBoxTimeToFoodVanish;
         private System.Windows.Forms.TextBox textBoxTimeToPoopVanish;
-        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.OpenFileDialog openBackgroundFileDialog;
         private System.Windows.Forms.TextBox textBoxBackgroundImage;
         private System.Windows.Forms.Button openBackgroundImage;
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button buttonReset;
+        private System.Windows.Forms.Button buttonBrainDLLDirectory;
+        private System.Windows.Forms.TextBox textBoxBrainDLLDirectory;
+        private System.Windows.Forms.Label labelDLLDir;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
     }
 }

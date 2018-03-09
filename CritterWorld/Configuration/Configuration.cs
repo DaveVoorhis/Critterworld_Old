@@ -38,6 +38,7 @@ namespace CritterWorld
             critterEnergyLostPerDefilement = 20;
             critterEnergyWhenBorn = 50;
             WorldFileName = "BackgroundBase.png";
+            BrainDLLPath = "";
         }
 
         public int FoodDumps 
@@ -158,5 +159,6 @@ namespace CritterWorld
 
         public string WorldFileName { get; set; }
 
+        public string BrainDLLPath { get; set; }
     }
 }
