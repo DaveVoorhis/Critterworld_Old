@@ -72,18 +72,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DemoCritterBrain1ConfigForm.cs">
+    <Compile Include="DemoCritterBrain1\DemoCritterBrain1ConfigForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DemoCritterBrain1ConfigForm.Designer.cs">
+    <Compile Include="DemoCritterBrain1\DemoCritterBrain1ConfigForm.Designer.cs">
       <DependentUpon>DemoCritterBrain1ConfigForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DemoCritterBrain5.cs" />
-    <Compile Include="DemoCritterBrain1.cs" />
-    <Compile Include="DemoCritterBrain2.cs" />
+    <Compile Include="DemoCritterBrain5\DemoCritterBrain5.cs" />
+    <Compile Include="DemoCritterBrain1\DemoCritterBrain1.cs" />
+    <Compile Include="DemoCritterBrain2\DemoCritterBrain2.cs" />
     <Compile Include="CritterCreator.cs" />
-    <Compile Include="DemoCritterBrain3.cs" />
-    <Compile Include="DemoCritterBrain4.cs" />
+    <Compile Include="DemoCritterBrain3\DemoCritterBrain3.cs" />
+    <Compile Include="DemoCritterBrain4\DemoCritterBrain4.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -95,7 +95,7 @@
   <ItemGroup>
     <EmbeddedResource Include="demo4_1.png" />
     <EmbeddedResource Include="demo4_2.png" />
-    <EmbeddedResource Include="DemoCritterBrain1ConfigForm.resx">
+    <EmbeddedResource Include="DemoCritterBrain1\DemoCritterBrain1ConfigForm.resx">
       <DependentUpon>DemoCritterBrain1ConfigForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -115,6 +115,18 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="demo4_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="demo4_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="demo4_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="demo4_6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

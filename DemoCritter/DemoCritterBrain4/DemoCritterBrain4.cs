@@ -9,19 +9,22 @@ namespace DemoCritter
 {
     public class DemoCritterBrain4 : CritterBrainCore
     {
-        static Image[] _images = new Image[4];
         Random random = new Random();
 
         public static DemoCritterBrain4 CreateCritterBrain4()
         {
-            _images[0] = GetImageFromResource("demo4_1.png");
-            _images[1] = GetImageFromResource("demo4_1.png");
-            _images[2] = GetImageFromResource("demo4_2.png");
-            _images[3] = GetImageFromResource("demo4_2.png");
+            Image[] _images = {
+                GetImageFromResource("demo4_1.png"),
+                GetImageFromResource("demo4_2.png"),
+                GetImageFromResource("demo4_3.png"),
+                GetImageFromResource("demo4_4.png"),
+                GetImageFromResource("demo4_5.png"),
+                GetImageFromResource("demo4_6.png")
+            };
             return new DemoCritterBrain4(_images);
         }
 
-        public DemoCritterBrain4(Image[] images) : base("Wimp", "Wayne Rippin", images)
+        public DemoCritterBrain4(Image[] images) : base("Wimp", "Wayne Rippin (with Dave mods)", images)
         {
         }
 
