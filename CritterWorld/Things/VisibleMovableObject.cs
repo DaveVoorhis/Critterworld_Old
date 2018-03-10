@@ -89,10 +89,12 @@ namespace CritterWorld
                 this.X = thing.X;
                 this.Y = thing.Y;
                 this.Type = thing.Type;
+                this.BoundingRadius = thing.BoundingRadius;
             }
             public int X { get; }
             public int Y { get; }
             public string Type { get; }
+            public int BoundingRadius { get; }
         }
 
         public IWorldObject[] Scan()

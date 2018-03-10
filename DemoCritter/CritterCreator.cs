@@ -13,6 +13,7 @@ namespace DemoCritter
 
         public IEnumerable<CritterBrains.CritterBrain> GetCritterBrains()
         {
+            // I bet there's a better way to do this. :-)
             for (int i = 0; i < totalCritterCount; i++)
             {
                 switch (i % critterVarieties)

@@ -84,6 +84,7 @@
     <Compile Include="CritterCreator.cs" />
     <Compile Include="DemoCritterBrain3\DemoCritterBrain3.cs" />
     <Compile Include="DemoCritterBrain4\DemoCritterBrain4.cs" />
+    <Compile Include="DemoCritterBrain1\DemoCritterBrain1Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

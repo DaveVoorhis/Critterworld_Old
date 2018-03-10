@@ -196,6 +196,17 @@ namespace CritterWorld
             return (deltaXSquared + deltaYSquared <= sumRadiiSquared);
         }
 
+        // Return true if this object is in collision
+        // with a region defined by its upper-left corner and a radius around its centre.
+        public bool IsTouching(int oX, int oY, int oRadius, int radius)
+        {
+            int aX = X + boundingRadius;
+            int aY = Y + boundingRadius;
+            int bX = oX + oRadius;
+            int bY = oY + oRadius;
+            return IsOverlapping(new Point(aX, aY), boundingRadius, new Point(bX, bY), radius);
+        }
+
         // Return true if this object is in collision with a VisibleObject bounded by
         // a specified radius.  Note that a VisibleObject's coordinates are defined
         // starting from the upper left corner of the object, so its bounding
@@ -203,19 +214,13 @@ namespace CritterWorld
         // of the object.
         public bool IsTouching(VisibleObject other, int radius)
         {
-            int aX = X + boundingRadius;
-            int aY = Y + boundingRadius;
-            int bX = other.X + other.boundingRadius;
-            int bY = other.Y + other.boundingRadius;
-            return IsOverlapping(new Point(aX, aY), boundingRadius, new Point(bX, bY), radius);
+            return IsTouching(other.X, other.Y, other.BoundingRadius, radius);
         }
 
         // As above, but return true if this object is in collision with a circle.
         public bool IsTouching(Point center, int radius)
         {
-            int aX = X + boundingRadius;
-            int aY = Y + boundingRadius;
-            return IsOverlapping(new Point(aX, aY), boundingRadius, center, radius);
+            return IsTouching(center.X, center.Y, radius, radius);
         }
 
         // As above, using the other object's boundingRadius

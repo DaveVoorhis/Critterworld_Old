@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="CritterBody.cs" />
     <Compile Include="CritterBrain.cs" />
+    <Compile Include="EnumAttackResult.cs" />
     <Compile Include="EnumStrength.cs" />
     <Compile Include="ICritter.cs" />
     <Compile Include="ICritterFactory.cs" />

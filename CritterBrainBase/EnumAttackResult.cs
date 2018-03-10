@@ -6,9 +6,14 @@ using System.Text;
 namespace CritterBrains
 {
     /// <summary>
-    /// Data about another critter.
+    /// Result of Attack() method.
     /// </summary>
-    public interface IOtherCritter : IWorldObject
+    public enum EnumAttackResult
     {
+        IAmDead,
+        DeadAlready,
+        TooFarAway,
+        Killed,
+        IDied
     }
 }

@@ -37,24 +37,27 @@
             // labelSpeed
             // 
             this.labelSpeed.AutoSize = true;
-            this.labelSpeed.Location = new System.Drawing.Point(36, 40);
+            this.labelSpeed.Location = new System.Drawing.Point(18, 21);
+            this.labelSpeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSpeed.Name = "labelSpeed";
-            this.labelSpeed.Size = new System.Drawing.Size(80, 25);
+            this.labelSpeed.Size = new System.Drawing.Size(41, 13);
             this.labelSpeed.TabIndex = 0;
             this.labelSpeed.Text = "Speed:";
             // 
             // textBoxSpeed
             // 
-            this.textBoxSpeed.Location = new System.Drawing.Point(116, 37);
+            this.textBoxSpeed.Location = new System.Drawing.Point(58, 19);
+            this.textBoxSpeed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSpeed.Name = "textBoxSpeed";
-            this.textBoxSpeed.Size = new System.Drawing.Size(100, 31);
+            this.textBoxSpeed.Size = new System.Drawing.Size(52, 20);
             this.textBoxSpeed.TabIndex = 1;
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(36, 328);
+            this.buttonOk.Location = new System.Drawing.Point(18, 171);
+            this.buttonOk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(139, 61);
+            this.buttonOk.Size = new System.Drawing.Size(70, 32);
             this.buttonOk.TabIndex = 0;
             this.buttonOk.Text = "Ok";
             this.buttonOk.UseVisualStyleBackColor = true;
@@ -62,9 +65,10 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(181, 328);
+            this.buttonCancel.Location = new System.Drawing.Point(90, 171);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(139, 61);
+            this.buttonCancel.Size = new System.Drawing.Size(70, 32);
             this.buttonCancel.TabIndex = 3;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -72,15 +76,16 @@
             // 
             // DemoCritterBrain1ConfigForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 439);
+            this.ClientSize = new System.Drawing.Size(387, 228);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.textBoxSpeed);
             this.Controls.Add(this.labelSpeed);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DemoCritterBrain1ConfigForm";
-            this.Text = "DemoCritterBrain1ConfigForm";
+            this.Text = "Drunkard Configuration";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DemoCritterBrain1ConfigForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

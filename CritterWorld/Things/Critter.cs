@@ -490,16 +490,20 @@ namespace CritterWorld
             }
         }
 
-        public void Attack(IOtherCritter otherCritter)
+        public EnumAttackResult Attack(IOtherCritter otherCritter)
         {
             if (IsDead)
             {
-                return;
+                return EnumAttackResult.IAmDead;
             }
             Critter other = (Critter)otherCritter;
             if (other.IsDead)
             {
-                return;
+                return EnumAttackResult.DeadAlready;
+            }
+            if (!IsTouching(otherCritter))
+            {
+                return EnumAttackResult.TooFarAway;
             }
             bool iWin = false;
             if (other.Energy == energy)
@@ -543,6 +547,7 @@ namespace CritterWorld
                 Logger.OutputToLog(msg, Logger.LogLevel.Message);
                 CritterWorldForm.AddMarqueeMessage(msg, Color.DarkRed);
                 other.Die("Killed by " + WhoAmI);
+                return EnumAttackResult.Killed;
             }
             else
             {
@@ -552,7 +557,13 @@ namespace CritterWorld
                 Logger.OutputToLog(msg, Logger.LogLevel.Message);
                 CritterWorldForm.AddMarqueeMessage(msg, Color.DarkRed);
                 Die("Killed by " + other.WhoAmI);
+                return EnumAttackResult.IDied;
             }
+        }
+
+        private bool IsTouching(IOtherCritter otherCritter)
+        {
+            return IsTouching(otherCritter.X, otherCritter.Y, otherCritter.BoundingRadius, CritterBoundingRadius);
         }
 
         public bool IsGoalReached

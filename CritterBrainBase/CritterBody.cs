@@ -114,24 +114,44 @@ namespace CritterBrains
             return _body.Scan();
         }
 
+        /// <summary>
+        /// Get direction to a given object.
+        /// </summary>
+        /// <param name="other">Reference to object.</param>
+        /// <returns>Direction in degrees.</returns>
         public int GetDirectionTo(IWorldObject other)
         {
             return _body.GetDirectionTo(other);
         }
 
+        /// <summary>
+        /// Is terrain blocking the route to an object?
+        /// </summary>
+        /// <param name="other">Reference to object.</param>
+        /// <returns>True if line-of-sight blocked by terrain. False otherwise.</returns>
         public bool IsTerrainBlockingRouteTo(IWorldObject other)
         {
             return _body.IsTerrainBlockingRouteTo(other);
         }
 
+        /// <summary>
+        /// Get the strength of a given critter.
+        /// </summary>
+        /// <param name="otherCritter">Reference to other critter.</param>
+        /// <returns>Strength</returns>
         public Strength GetStrengthOf(IOtherCritter otherCritter)
         {
             return _body.GetStrengthOf(otherCritter);
         }
 
-        public void Attack(IOtherCritter otherCritter)
+        /// <summary>
+        /// Attack a given critter.
+        /// </summary>
+        /// <param name="otherCritter">Reference to other critter.</param>
+        /// <returns>Result of attack.</returns>
+        public EnumAttackResult Attack(IOtherCritter otherCritter)
         {
-            _body.Attack(otherCritter);
+            return _body.Attack(otherCritter);
         }
     }
 }

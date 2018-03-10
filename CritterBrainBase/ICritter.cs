@@ -80,7 +80,8 @@ namespace CritterBrains
         /// Launch an attack on a critter.
         /// </summary>
         /// <param name="otherCritter">Target critter</param>
-        void Attack(IOtherCritter otherCritter);
+        /// <returns>Result of attack</returns>
+        EnumAttackResult Attack(IOtherCritter otherCritter);
 
         /// <summary>
         /// Obtain my horizontal coordinate

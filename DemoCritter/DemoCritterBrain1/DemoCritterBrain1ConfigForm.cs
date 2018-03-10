@@ -32,6 +32,7 @@ namespace DemoCritter
                 try
                 {
                     brain.Speed = speed;
+                    brain.SaveConfiguration();
                     Close();
                 }
                 catch (Exception ex)
