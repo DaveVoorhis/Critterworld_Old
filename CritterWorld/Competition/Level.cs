@@ -6,9 +6,9 @@ using System.Drawing;
 
 namespace CritterWorld
 {
-    public class Competition
+    public class Level
     {
-        public Competition(string backgroundImageFilename, int maximumCrittersAtOnce, int maximumCritterAge, Point goal)
+        public Level(string backgroundImageFilename, int maximumCrittersAtOnce, int maximumCritterAge, Point goal)
         {
             BackgroundImageFilename = backgroundImageFilename;
             MaximumCrittersAtOnce = maximumCrittersAtOnce;

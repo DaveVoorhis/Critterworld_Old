@@ -17,7 +17,7 @@ namespace CritterWorld
         static MarqueeLabel messageMarquee = null;
 
         World world = null;
-        Campaign campaign = null;
+        Competition competition = null;
         Point goal = new Point();
         bool autoLaunchCompetition = false;
         Timer runningUpdateTimer;
@@ -87,7 +87,7 @@ namespace CritterWorld
             world = new World(this);
             if (autoLaunchCompetition)
             {
-                StartCampaign();
+                StartCompetition();
             }
             runningUpdateTimer.Start();
         }
@@ -118,45 +118,45 @@ namespace CritterWorld
             Utility.GetConfiguration().EditConfiguration();
         }
 
-        private void startCampaignToolStripMenuItem_Click(object sender, EventArgs e)
+        private void startCompetitionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             nextLevelToolStripMenuItem.Enabled = true;
-            StartCampaign();
+            StartCompetition();
         }
 
-        private void stopCampaignToolStripMenuItem_Click(object sender, EventArgs e)
+        private void stopCompetitionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             nextLevelToolStripMenuItem.Enabled = false;
-            StopCampaign();
+            StopCompetition();
         }
 
         private void nextLevelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CampaignNextLevel();
+            CompetitionNextLevel();
         }
 
         #endregion
 
-        private void StartCampaign()
+        private void StartCompetition()
         {
-            campaign = new CampaignDefault(this);
-            campaign.Start();
+            competition = new CompetitionDefault(this);
+            competition.Start();
         }
 
-        private void StopCampaign()
+        private void StopCompetition()
         {
-            if (campaign != null)
+            if (competition != null)
             {
-                campaign.Stop();
-                campaign = null;
+                competition.Stop();
+                competition = null;
             }
         }
 
-        private void CampaignNextLevel()
+        private void CompetitionNextLevel()
         {
-            if (campaign != null)
+            if (competition != null)
             {
-                campaign.NextCompetition();
+                competition.NextLevel();
             }
         }
 

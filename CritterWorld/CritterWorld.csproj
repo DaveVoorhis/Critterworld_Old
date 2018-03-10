@@ -74,9 +74,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Campaign\Campaign.cs" />
-    <Compile Include="Campaign\CampaignDefault.cs" />
-    <Compile Include="Campaign\Competition.cs" />
+    <Compile Include="Competition\Competition.cs" />
+    <Compile Include="Competition\CompetitionDefault.cs" />
+    <Compile Include="Competition\Level.cs" />
     <Compile Include="Configuration\ConfigForm.cs">
       <SubType>Form</SubType>
     </Compile>

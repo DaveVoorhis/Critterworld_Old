@@ -6,14 +6,14 @@ using System.Windows.Forms;
 
 namespace CritterWorld
 {
-    public class Campaign
+    public class Competition
     {
         CritterWorldForm critterWorld;
-        List<Competition> levels = new List<Competition>();
-        int currentCompetition = -1;
+        List<Level> levels = new List<Level>();
+        int currentLevel = -1;
         Timer checkCompletionTimer;
 
-        public Campaign(CritterWorldForm critterWorld)
+        public Competition(CritterWorldForm critterWorld)
         {
             this.critterWorld = critterWorld;
             checkCompletionTimer = new Timer();
@@ -26,29 +26,29 @@ namespace CritterWorld
         {
             if (critterWorld.IsWorldFinished)
             {
-                NextCompetition();
+                NextLevel();
             }
         }
 
-        public void NextCompetition()
+        public void NextLevel()
         {
-            currentCompetition++;
-            if (currentCompetition >= levels.Count)
+            currentLevel++;
+            if (currentLevel >= levels.Count)
             {
-                currentCompetition = 0;
+                currentLevel = 0;
             }
-            Competition campaign = levels[currentCompetition];
-            critterWorld.SetBackground(campaign.BackgroundImageFilename);
-            critterWorld.SetGoal(campaign.Goal);
-            critterWorld.MaximumActiveCritterCount = campaign.MaximumCrittersAtOnce;
-            critterWorld.MaximumCritterAge = campaign.MaximumCritterAge;
+            Level level = levels[currentLevel];
+            critterWorld.SetBackground(level.BackgroundImageFilename);
+            critterWorld.SetGoal(level.Goal);
+            critterWorld.MaximumActiveCritterCount = level.MaximumCrittersAtOnce;
+            critterWorld.MaximumCritterAge = level.MaximumCritterAge;
             critterWorld.Start();
         }
 
         public void Start()
         {
             critterWorld.Stop();
-            NextCompetition();
+            NextLevel();
         }
 
         public void Stop()
@@ -56,7 +56,7 @@ namespace CritterWorld
             critterWorld.Stop();
         }
 
-        public void Add(Competition competition)
+        public void Add(Level competition)
         {
             levels.Add(competition);
         }

@@ -41,8 +41,8 @@
             this.newWorldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stopWorldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.startCampaignToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stopCampaignToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.startCompetitionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stopCompetitionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nextLevelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,8 +106,8 @@
             this.newWorldToolStripMenuItem,
             this.stopWorldToolStripMenuItem,
             this.toolStripSeparator2,
-            this.startCampaignToolStripMenuItem,
-            this.stopCampaignToolStripMenuItem,
+            this.startCompetitionToolStripMenuItem,
+            this.stopCompetitionToolStripMenuItem,
             this.nextLevelToolStripMenuItem,
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
@@ -134,19 +134,19 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(274, 6);
             // 
-            // startCampaignToolStripMenuItem
+            // startCompetitionToolStripMenuItem
             // 
-            this.startCampaignToolStripMenuItem.Name = "startCampaignToolStripMenuItem";
-            this.startCampaignToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
-            this.startCampaignToolStripMenuItem.Text = "Start Campaign";
-            this.startCampaignToolStripMenuItem.Click += new System.EventHandler(this.startCampaignToolStripMenuItem_Click);
+            this.startCompetitionToolStripMenuItem.Name = "startCompetitionToolStripMenuItem";
+            this.startCompetitionToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.startCompetitionToolStripMenuItem.Text = "Start Competition";
+            this.startCompetitionToolStripMenuItem.Click += new System.EventHandler(this.startCompetitionToolStripMenuItem_Click);
             // 
-            // stopCampaignToolStripMenuItem
+            // stopCompetitionToolStripMenuItem
             // 
-            this.stopCampaignToolStripMenuItem.Name = "stopCampaignToolStripMenuItem";
-            this.stopCampaignToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
-            this.stopCampaignToolStripMenuItem.Text = "Stop Campaign";
-            this.stopCampaignToolStripMenuItem.Click += new System.EventHandler(this.stopCampaignToolStripMenuItem_Click);
+            this.stopCompetitionToolStripMenuItem.Name = "stopCompetitionToolStripMenuItem";
+            this.stopCompetitionToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.stopCompetitionToolStripMenuItem.Text = "Stop Competition";
+            this.stopCompetitionToolStripMenuItem.Click += new System.EventHandler(this.stopCompetitionToolStripMenuItem_Click);
             // 
             // nextLevelToolStripMenuItem
             // 
@@ -545,8 +545,8 @@
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem selectBackgroundToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem startCampaignToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stopCampaignToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem startCompetitionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stopCompetitionToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem nextLevelToolStripMenuItem;
         private MarqueeLabel marqueeLabel1;
