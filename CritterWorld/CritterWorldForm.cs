@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Reflection;
-using CritterBrainBase;
+using CritterBrains;
 using Sprites;
 
 namespace CritterWorld

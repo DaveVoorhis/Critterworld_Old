@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
-using CritterBrainBase;
+using CritterBrains;
 
 namespace DemoCritter
 {
-    public class DemoCritterBrain2 : CritterBrainCore
+    public class DemoCritterBrain2 : CritterBrains.CritterBrain
     {
         Random random = new Random();
         int speed = 10;
@@ -20,7 +20,7 @@ namespace DemoCritter
         {
             speed = 10;
             Critter.Direction = random.Next(0, 360);
-            Critter.Move(speed);
+            Critter.Speed = speed;
         }
 
         public override void Think()
@@ -41,19 +41,19 @@ namespace DemoCritter
             {
                 speed = 1;
             }
-            Critter.Move(speed);
+            Critter.Speed = speed;
         }
 
         public override void NotifyBlockedByTerrain()
         {
             Critter.Direction = Critter.Direction + 90;
-            Critter.Move(speed);
+            Critter.Speed = speed;
         }
 
         public override void NotifyBumpedCritter(OtherCritter otherCritter)
         {
             Critter.Direction = Critter.Direction + 180;
-            Critter.Move(speed);
+            Critter.Speed = speed;
         }
 
         public override void NotifyCloseToFood(int x, int y)

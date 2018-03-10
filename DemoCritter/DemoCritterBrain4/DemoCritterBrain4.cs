@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
-using CritterBrainBase;
+using CritterBrains;
 
 namespace DemoCritter
 {
-    public class DemoCritterBrain4 : CritterBrainCore
+    public class DemoCritterBrain4 : CritterBrains.CritterBrain
     {
         Random random = new Random();
 
@@ -31,7 +31,7 @@ namespace DemoCritter
         public override void Birth()
         {
             Critter.Direction = random.Next(0, 360);
-            Critter.Move(5);
+            Critter.Speed = 5;
         }
 
         public override void NotifyBlockedByTerrain()
@@ -44,18 +44,18 @@ namespace DemoCritter
             {
                 Critter.Direction = Critter.Direction + 20;
             }
-            Critter.Move(1);
+            Critter.Speed = 1;
         }
 
         public override void NotifyBumpedCritter(OtherCritter other)
         {
             Critter.Direction = Critter.Direction + 180;
-            Critter.Move(2);
+            Critter.Speed = 2;
         }
 
         public override void NotifyEaten()
         {
-            Critter.Move(1);
+            Critter.Speed = 1;
         }
 
         public override void NotifyCloseToFood(int x, int y)
@@ -63,7 +63,7 @@ namespace DemoCritter
             if (!Critter.IsTerrainBlockingRouteTo(x, y))
             {
                 Critter.Direction = Critter.GetDirectionTo(x, y);
-                Critter.Move(3);
+                Critter.Speed = 3;
             }
         }
 
@@ -72,7 +72,7 @@ namespace DemoCritter
             if (!otherCritter.IsTerrainBlockingRouteTo)
             {
                 Critter.Direction = otherCritter.DirectionTo + 180;
-                Critter.Move(3);
+                Critter.Speed = 3;
             }
         }
 

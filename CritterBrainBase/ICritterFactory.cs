@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using CritterBrainBase;
+using CritterBrains;
 
-namespace CritterBrainBase
+namespace CritterBrains
 {
     public interface ICritterFactory
     {
-        IEnumerable<CritterBrainCore> GetCritterBrains();
+        IEnumerable<CritterBrain> GetCritterBrains();
     }
 }

@@ -6,9 +6,9 @@ using System.Drawing;
 
 // CritterBody is a thin wrapper around the ICritter interface for use by critter brains.
 
-namespace CritterBrainBase
+namespace CritterBrains
 {
-    public class CritterBody
+    public class CritterBody : ICritter
     {
         ICritter _body;
 
@@ -18,40 +18,31 @@ namespace CritterBrainBase
         }
 
         /// <summary>
-        /// Start the critter moving at the specified speed
-        /// </summary>
-        /// <param name="speed"></param>
-
-        public void Move(int speed)
-        {
-            _body.MoveCritter(speed);
-        }
-
-        /// <summary>
         /// Stop the critter moving
         /// </summary>
-
         public void Stop()
         {
-            _body.StopCritter();
+            _body.Stop();
         }
 
         /// <summary>
-        /// Returns the current speed of the critter
+        /// Set/Get the current speed of the critter
         /// </summary>
-
         public int Speed
         {
             get
             {
                 return _body.Speed;
             }
+            set
+            {
+                _body.Speed = value;
+            }
         }
 
         /// <summary>
         /// Set/Get the direction the critter is to move
         /// </summary>
-
         public int Direction
         {
             set
@@ -67,7 +58,6 @@ namespace CritterBrainBase
         /// <summary>
         /// Get the current energy value of the critter
         /// </summary>
-
         public int Energy
         {
             get
@@ -79,7 +69,6 @@ namespace CritterBrainBase
         /// <summary>
         /// Get the current age of the critter
         /// </summary>
-
         public int Age
         {
             get
@@ -88,10 +77,13 @@ namespace CritterBrainBase
             }
         }
 
+        public int X => _body.X;
+
+        public int Y => _body.Y;
+
         /// <summary>
         /// Get the direction to the specified x, y position
         /// </summary>
-
         public int GetDirectionTo(int x, int y)
         {
             return _body.GetDirectionTo(x, y);
@@ -100,7 +92,6 @@ namespace CritterBrainBase
         /// <summary>
         /// Returns the Rectangle representing the goal to be reached.
         /// </summary>
-
         public Rectangle GetDestination()
         {
             return _body.GetDestination();
@@ -109,11 +100,38 @@ namespace CritterBrainBase
         /// <summary>
         /// Is terrain blocking the direct route to the specified x, y coordinates
         /// </summary>
-
         public bool IsTerrainBlockingRouteTo(int x, int y)
         {
             return _body.IsTerrainBlockingRouteTo(x, y);
         }
 
+        /// <summary>
+        /// Scan for nearby objects.
+        /// </summary>
+        /// <returns>Array of IWorldObjectS.</returns>
+        public IWorldObject[] Scan()
+        {
+            return _body.Scan();
+        }
+
+        public int GetDirectionTo(IWorldObject other)
+        {
+            return _body.GetDirectionTo(other);
+        }
+
+        public bool IsTerrainBlockingRouteTo(IWorldObject other)
+        {
+            return _body.IsTerrainBlockingRouteTo(other);
+        }
+
+        public Strength GetStrengthOf(IOtherCritter otherCritter)
+        {
+            return _body.GetStrengthOf(otherCritter);
+        }
+
+        public void Attack(IOtherCritter otherCritter)
+        {
+            _body.Attack(otherCritter);
+        }
     }
 }

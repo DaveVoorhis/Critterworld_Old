@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
-using CritterBrainBase;
+using CritterBrains;
 using Sprites;
 
 namespace CritterWorld 
@@ -15,7 +15,7 @@ namespace CritterWorld
         public const int CritterHeight = 15;
         public const int CritterBoundingRadius = 8;
 
-        CritterBrainCore critterBrain;
+        CritterBrains.CritterBrain critterBrain;
         string fileContainingBrain = null;
 
         bool isGoalReached = false;
@@ -41,7 +41,7 @@ namespace CritterWorld
 
         static Random randomiser = new Random();
         
-        public static Critter CreateCritter(String fileName, CritterBrainCore critterBrain, World world, Point position)
+        public static Critter CreateCritter(String fileName, CritterBrains.CritterBrain critterBrain, World world, Point position)
         {
             if (deadCritterImage == null)
             {
@@ -80,7 +80,7 @@ namespace CritterWorld
             return new Critter(fileName, critterBrain, world, critterSprite, CritterBoundingRadius, position);
         }
 
-        public Critter(String fileName, CritterBrainCore critterBrain, World world, Sprite sprite, int boundingRadius, Point position)
+        public Critter(String fileName, CritterBrains.CritterBrain critterBrain, World world, Sprite sprite, int boundingRadius, Point position)
             : base(world, sprite, boundingRadius)
         {
             this.critterBrain = critterBrain;
@@ -163,7 +163,7 @@ namespace CritterWorld
             return new Rectangle(goal.Position.X, goal.Position.Y, goal.Width, goal.Height);
         }
 
-        public CritterBrainCore CritterBrain
+        public CritterBrain CritterBrain
         {
             get
             {
@@ -221,7 +221,7 @@ namespace CritterWorld
             Speed = speed;
         }
 
-        public void StopCritter()
+        public void Stop()
         {
             Speed = 0;
         }
@@ -455,7 +455,7 @@ namespace CritterWorld
             energyTimer.Stop();
             ageTimer.Stop();
             Logger.OutputToLog("Critter " + WhoAmI + " in file " + fileContainingBrain + " died: " + reason, Logger.LogLevel.Message);
-            StopCritter();
+            Stop();
             base.Die(reason);
         }
 

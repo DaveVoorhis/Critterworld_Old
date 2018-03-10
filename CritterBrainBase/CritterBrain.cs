@@ -5,9 +5,9 @@ using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace CritterBrainBase
+namespace CritterBrains
 {
-    public class CritterBrainCore
+    public class CritterBrain
     {
         string _name = "Unnamed Critter";
         string _creator = "Creator not specified";
@@ -15,11 +15,11 @@ namespace CritterBrainBase
         ICritter _critter = null;
         CritterBody _critterBody = null;
 
-        public CritterBrainCore(string name, string creator) : this(name, creator, null)
+        public CritterBrain(string name, string creator) : this(name, creator, null)
         {
         }
 
-        public CritterBrainCore(string name, string creator, Image[] images)
+        public CritterBrain(string name, string creator, Image[] images)
         {
             _name = name;
             _creator = creator;

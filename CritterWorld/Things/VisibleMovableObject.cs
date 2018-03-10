@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Drawing;
-using CritterBrainBase;
+using CritterBrains;
 using Sprites;
 
 namespace CritterWorld
@@ -80,6 +80,29 @@ namespace CritterWorld
                 }
             }
             return approved;
+        }
+
+        private class ScanInfo : IWorldObject
+        {
+            public ScanInfo(VisibleObject thing)
+            {
+                this.X = thing.X;
+                this.Y = thing.Y;
+                this.Type = thing.Type;
+            }
+            public int X { get; }
+            public int Y { get; }
+            public string Type { get; }
+        }
+
+        public IWorldObject[] Scan()
+        {
+            List<IWorldObject> nearbyObjects = new List<IWorldObject>();
+            foreach (VisibleObject objectInRange in World.GetObjectsCloseBy(this, BoundingRadius * 8))
+            {
+                nearbyObjects.Add(new ScanInfo(objectInRange));
+            }
+            return nearbyObjects.ToArray();
         }
 
         public int Speed

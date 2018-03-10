@@ -6,7 +6,7 @@ using System.Text;
 // Forms a wrapper around the IOtherCritter interface to ensure that brains can only call the methods
 // we want them to call.
 
-namespace CritterBrainBase
+namespace CritterBrains
 {
     public class OtherCritter
     {
@@ -22,7 +22,6 @@ namespace CritterBrainBase
         /// <summary>
         /// Returns the strength of the other critter
         /// </summary>
-
         public Strength Strength
         {
             get
@@ -31,10 +30,10 @@ namespace CritterBrainBase
 
             }
         }
+
         /// <summary>
         /// Attack the other critter
         /// </summary>
-        
         public void Attack()
         {
             _me.Attack(_otherCritter);
@@ -43,7 +42,6 @@ namespace CritterBrainBase
         /// <summary>
         /// Return the direction to the other critter
         /// </summary>
-
         public int DirectionTo
         {
             get
@@ -51,10 +49,10 @@ namespace CritterBrainBase
                 return _me.GetDirectionTo(_otherCritter);
             }
         }
+
         /// <summary>
         /// Is terrain blocking the direct route to the other critter?
         /// </summary>
-        
         public bool IsTerrainBlockingRouteTo
         {
             get

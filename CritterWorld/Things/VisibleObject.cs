@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Threading;
-using CritterBrainBase;
+using CritterBrains;
 using Sprites;
 
 namespace CritterWorld
@@ -71,7 +71,7 @@ namespace CritterWorld
                         if (this is Critter critter)
                         {
                             critter.Die("Crashed");
-                            CritterWorldForm.AddMarqueeMessage(critter.CritterBrain.Name + " by " + critter.CritterBrain.Creator + " crashed.");
+                            CritterWorldForm.AddMarqueeMessage((string)(critter.CritterBrain.Name + " by " + critter.CritterBrain.Creator + " crashed."));
                             who = ((Critter)this).File;
                         }
                         Logger.OutputToLog("HandleEvent crashed processing message " + nextMessage.GetType().ToString() + " in " + who + "'s VisibleObject.PumpEvents: " + e.Message, Logger.LogLevel.Error);
@@ -258,5 +258,12 @@ namespace CritterWorld
             return GetDirectionTo(other.X, other.Y);
         }
 
+        public string Type
+        {
+            get
+            {
+                return GetType().Name;
+            }
+        }
     }
 }

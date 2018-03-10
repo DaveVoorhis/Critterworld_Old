@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
-using CritterBrainBase;
+using CritterBrains;
 
 namespace DemoCritter
 {
-    public class DemoCritterBrain5 : CritterBrainCore
+    public class DemoCritterBrain5 : CritterBrains.CritterBrain
     {
         Random randomizer = new Random();
         int nominalSpeed = 10;
@@ -26,33 +26,33 @@ namespace DemoCritter
             if (!Critter.IsTerrainBlockingRouteTo(centreDestinationX, centreDestinationY)) {
                 int direction = Critter.GetDirectionTo(centreDestinationX, centreDestinationY);
                 Critter.Direction = direction;
-                Critter.Move(nominalSpeed);
+                Critter.Speed = nominalSpeed;
             }
         }
 
         public override void Birth()
         {
             Critter.Direction = sideWaysDirection;
-            Critter.Move(nominalSpeed);
+            Critter.Speed = nominalSpeed;
         }
 
         public override void NotifyBlockedByTerrain()
         {
             Critter.Direction = Critter.Direction + sideWaysDirection;
-            Critter.Move(nominalSpeed);
+            Critter.Speed = nominalSpeed;
         }
 
         public override void NotifyBumpedCritter(OtherCritter other)
         {
             Critter.Direction = Critter.Direction + reverseDirection;
-            Critter.Move(nominalSpeed);
+            Critter.Speed = nominalSpeed;
         }
 
         public override void NotifyCloseToFood(int x, int y)
         {
             int newDirection = Critter.GetDirectionTo(x, y);
             Critter.Direction = newDirection;
-            Critter.Move(nominalSpeed);
+            Critter.Speed = nominalSpeed;
         }
 
         int lastPoopX = -1;
@@ -65,7 +65,7 @@ namespace DemoCritter
             lastPoopX = x;
             lastPoopY = y;
             Critter.Direction = Critter.Direction + sideWaysDirection;
-            Critter.Move(nominalSpeed);
+            Critter.Speed = nominalSpeed;
         }
     }
 }

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
-using CritterBrainBase;
+using CritterBrains;
 
 namespace DemoCritter
 {
-    public class DemoCritterBrain3 : CritterBrainCore
+    public class DemoCritterBrain3 : CritterBrains.CritterBrain
     {
         Random random = new Random();
 
@@ -18,13 +18,13 @@ namespace DemoCritter
         public override void Birth()
         {
             Critter.Direction = random.Next(0, 360);
-            Critter.Move(10);
+            Critter.Speed = 10;
         }
 
         public override void NotifyBlockedByTerrain()
         {
             Critter.Direction = Critter.Direction + random.Next(0, 360);
-            Critter.Move(5);
+            Critter.Speed = 5;
         }
 
         public override void NotifyBumpedCritter(OtherCritter other)
@@ -33,18 +33,18 @@ namespace DemoCritter
                 other.Strength == Strength.Weaker)
             {
                 other.Attack();
-                Critter.Move(1);
+                Critter.Speed = 1;
             }
             else
             {
                 Critter.Direction = Critter.Direction + 180;
-                Critter.Move(10);
+                Critter.Speed = 10;
             }
         }
 
         public override void NotifyEaten()
         {
-            Critter.Move(1);
+            Critter.Speed = 1;
         }
 
         public override void NotifyCloseToFood(int x, int y)
@@ -53,7 +53,7 @@ namespace DemoCritter
             {
                 int newDirection = Critter.GetDirectionTo(x, y);
                 Critter.Direction = newDirection;
-                Critter.Move(3);
+                Critter.Speed = 3;
             }
         }
 
@@ -64,7 +64,7 @@ namespace DemoCritter
                  otherCritter.Strength == Strength.MuchWeaker))
             {
                 Critter.Direction = otherCritter.DirectionTo;
-                Critter.Move(10);
+                Critter.Speed = 10;
             }
         }
 

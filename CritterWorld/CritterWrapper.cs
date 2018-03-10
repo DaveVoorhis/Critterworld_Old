@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Drawing;
-using CritterBrainBase;
+using CritterBrains;
 
 namespace CritterWorld
 {
@@ -9,12 +9,12 @@ namespace CritterWorld
         public const string TimeToGoalDisplayFormat = @"mm\:ss\.fff";
 
         string file;
-        CritterBrainCore brain;
+        CritterBrains.CritterBrain brain;
         Critter critter;
 
         static Image waitingCritterImage = null;
 
-        internal CritterWrapper(string file, CritterBrainCore brain)
+        internal CritterWrapper(string file, CritterBrains.CritterBrain brain)
         {
             this.file = file;
             this.brain = brain;
@@ -33,7 +33,7 @@ namespace CritterWorld
             }
         }
 
-        internal CritterBrainCore Brain
+        internal CritterBrain Brain
         {
             get
             {

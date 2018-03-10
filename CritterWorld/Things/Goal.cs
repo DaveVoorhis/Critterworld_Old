@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Threading;
-using CritterBrainBase;
+using CritterBrains;
 using Sprites;
 
 namespace CritterWorld 

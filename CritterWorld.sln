@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CritterWorldRunner", "Critt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CritterWorldControlPanel", "CritterWorldControlPanel\CritterWorldControlPanel.csproj", "{A90B9F06-7073-4796-886C-115C667A5D22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CritterBrainBase", "CritterBrainBase\CritterBrainBase.csproj", "{C9BC9344-AAD7-4EC2-850D-F82C557F7190}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CritterBrain", "CritterBrainBase\CritterBrain.csproj", "{C9BC9344-AAD7-4EC2-850D-F82C557F7190}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

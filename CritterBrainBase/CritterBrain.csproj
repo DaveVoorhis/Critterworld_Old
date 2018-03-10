@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CritterBody.cs" />
-    <Compile Include="CritterBrainCore.cs" />
+    <Compile Include="CritterBrain.cs" />
     <Compile Include="EnumStrength.cs" />
     <Compile Include="ICritter.cs" />
     <Compile Include="ICritterFactory.cs" />

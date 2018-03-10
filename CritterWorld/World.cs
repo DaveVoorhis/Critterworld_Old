@@ -8,7 +8,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.IO;
 using System.Drawing;
-using CritterBrainBase;
+using CritterBrains;
 
 using Sprites;
 
@@ -282,7 +282,7 @@ namespace CritterWorld
                             try
                             {
                                 ICritterFactory critterFactory = (ICritterFactory)Activator.CreateInstance(type);
-                                foreach (CritterBrainCore brain in critterFactory.GetCritterBrains())
+                                foreach (CritterBrains.CritterBrain brain in critterFactory.GetCritterBrains())
                                 {
                                     if (brain == null)
                                     {
@@ -454,7 +454,7 @@ namespace CritterWorld
                                     if (critter.Critter.IsGoalReached)
                                     {
                                         recordFinishedCritter(critter);
-                                        leaderboard.AddFinisher(critter.CritterName, critter.Critter.CritterBrain.Creator, critter.Critter.TimeToGoal);
+                                        leaderboard.AddFinisher(critter.CritterName, (string)critter.Critter.CritterBrain.Creator, critter.Critter.TimeToGoal);
                                     }
                                     else
                                     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
-using CritterBrainBase;
+using CritterBrains;
 
 namespace DemoCritter
 {
-    public class DemoCritterBrain1 : CritterBrainCore
+    public class DemoCritterBrain1 : CritterBrains.CritterBrain
     {
         Random random = new Random();
         DateTime lastMovementTime;
@@ -46,7 +46,7 @@ namespace DemoCritter
         private void DoRandomDirection() 
         {
             Critter.Direction = random.Next(0, 360);
-            Critter.Move(nominalSpeed);
+            Critter.Speed = nominalSpeed;
             lastMovementTime = DateTime.Now;
             randomIntervalInSeconds = random.Next(1, 5);
         }
@@ -63,13 +63,13 @@ namespace DemoCritter
         public override void NotifyBlockedByTerrain()
         {
             Critter.Direction = Critter.Direction - 10;
-            Critter.Move(nominalSpeed);
+            Critter.Speed = nominalSpeed;
         }
 
         public override void NotifyBumpedCritter(OtherCritter other)
         {
             Critter.Direction = Critter.Direction + 180;
-            Critter.Move(nominalSpeed);
+            Critter.Speed = nominalSpeed;
         }
 
         public override void NotifyCloseToFood(int x, int y)

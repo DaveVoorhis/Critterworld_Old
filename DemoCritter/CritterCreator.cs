@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using CritterBrainBase;
+using CritterBrains;
 
 namespace DemoCritter
 {
@@ -11,7 +11,7 @@ namespace DemoCritter
         const int totalCritterCount = 5;
         const int critterVarieties = 5;
 
-        public IEnumerable<CritterBrainCore> GetCritterBrains()
+        public IEnumerable<CritterBrains.CritterBrain> GetCritterBrains()
         {
             for (int i = 0; i < totalCritterCount; i++)
             {
