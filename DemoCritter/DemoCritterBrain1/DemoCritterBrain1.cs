@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 using CritterBrains;
 
@@ -7,12 +8,26 @@ namespace DemoCritter
 {
     public class DemoCritterBrain1 : CritterBrains.CritterBrain
     {
-        const string ConfigurationFileName = "Drunkard.cfg";
+        string ConfigurationFileName = ConfigurationDirectory + "/" + "Drunkard.cfg";
 
         Random random = new Random();
         DateTime lastMovementTime;
         int randomIntervalInSeconds;
         DemoCritterBrain1Configuration configuration = null;
+
+        /// <summary>
+        /// Prefered directory for configuration files.
+        /// </summary>
+        private static string ConfigurationDirectory
+        {
+            get
+            {
+                string codeBase = Assembly.GetExecutingAssembly().CodeBase;
+                UriBuilder uri = new UriBuilder(codeBase);
+                string path = Uri.UnescapeDataString(uri.Path);
+                return Path.GetDirectoryName(path);
+            }
+        }
 
         public DemoCritterBrain1() : base("Drunkard", "Wayne & Dave")
         {
