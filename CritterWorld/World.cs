@@ -262,9 +262,7 @@ namespace CritterWorld
         public void LoadCritters()
         {
             StopWorld();
-            // Get list of all dll files in same folder as main executable and
-            // iterate through them seeing if any of them contain classes that
-            // implement ICritterFactory.
+            // Get list of all dll files in specified folder. Iterate through them to find classes that implement ICritterFactory.
             string configDLLPath = Utility.GetConfiguration().BrainDLLPath.Trim();
             string dllPath = (configDLLPath.Length > 0) ? configDLLPath : Path.GetDirectoryName(Application.ExecutablePath);
             Logger.OutputToLog("Loading critter brains from " + dllPath, Logger.LogLevel.Message);
