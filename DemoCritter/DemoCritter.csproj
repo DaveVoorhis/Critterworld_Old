@@ -88,9 +88,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CritterBrainBase\CritterBrain.csproj">
+    <ProjectReference Include="..\CritterBrains\CritterBrains.csproj">
       <Project>{C9BC9344-AAD7-4EC2-850D-F82C557F7190}</Project>
-      <Name>CritterBrain</Name>
+      <Name>CritterBrains</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

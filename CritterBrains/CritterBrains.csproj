@@ -8,8 +8,8 @@
     <ProjectGuid>{C9BC9344-AAD7-4EC2-850D-F82C557F7190}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CritterBrainBase</RootNamespace>
-    <AssemblyName>CritterBrainBase</AssemblyName>
+    <RootNamespace>CritterBrains</RootNamespace>
+    <AssemblyName>CritterBrain</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
