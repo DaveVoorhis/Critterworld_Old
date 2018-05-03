@@ -64,7 +64,10 @@ namespace CritterWorld
                         // We have hit another object that blocks us; we'll reset the old position
                         lastTouchingObject = touchingObject;
                     }
-                    Logger.OutputToLog("Bump " + this + " into " + touchingObject, Logger.LogLevel.Message);
+
+                    // This tends to be noisy. Comment it out!
+                    //                    Logger.OutputToLog("Bump " + this + " into " + touchingObject, Logger.LogLevel.Message);
+
                     DoNotifyBumped(touchingObject);
                 }
                 else

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CritterWorldForm));
             this.menuMain = new System.Windows.Forms.MenuStrip();
             this.worldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,8 +95,8 @@
             this.settingsToolStripMenuItem});
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
-            this.menuMain.Padding = new System.Windows.Forms.Padding(8, 4, 0, 4);
-            this.menuMain.Size = new System.Drawing.Size(3336, 44);
+            this.menuMain.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuMain.Size = new System.Drawing.Size(1869, 24);
             this.menuMain.TabIndex = 0;
             this.menuMain.Text = "menuStrip1";
             // 
@@ -112,58 +112,58 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.worldToolStripMenuItem.Name = "worldToolStripMenuItem";
-            this.worldToolStripMenuItem.Size = new System.Drawing.Size(90, 36);
+            this.worldToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.worldToolStripMenuItem.Text = "World";
             // 
             // newWorldToolStripMenuItem
             // 
             this.newWorldToolStripMenuItem.Name = "newWorldToolStripMenuItem";
-            this.newWorldToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.newWorldToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.newWorldToolStripMenuItem.Text = "Start World";
             this.newWorldToolStripMenuItem.Click += new System.EventHandler(this.newWorldToolStripMenuItem_Click);
             // 
             // stopWorldToolStripMenuItem
             // 
             this.stopWorldToolStripMenuItem.Name = "stopWorldToolStripMenuItem";
-            this.stopWorldToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.stopWorldToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.stopWorldToolStripMenuItem.Text = "Stop World";
             this.stopWorldToolStripMenuItem.Click += new System.EventHandler(this.stopWorldToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(274, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(165, 6);
             // 
             // startCompetitionToolStripMenuItem
             // 
             this.startCompetitionToolStripMenuItem.Name = "startCompetitionToolStripMenuItem";
-            this.startCompetitionToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.startCompetitionToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.startCompetitionToolStripMenuItem.Text = "Start Competition";
             this.startCompetitionToolStripMenuItem.Click += new System.EventHandler(this.startCompetitionToolStripMenuItem_Click);
             // 
             // stopCompetitionToolStripMenuItem
             // 
             this.stopCompetitionToolStripMenuItem.Name = "stopCompetitionToolStripMenuItem";
-            this.stopCompetitionToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.stopCompetitionToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.stopCompetitionToolStripMenuItem.Text = "Stop Competition";
             this.stopCompetitionToolStripMenuItem.Click += new System.EventHandler(this.stopCompetitionToolStripMenuItem_Click);
             // 
             // nextLevelToolStripMenuItem
             // 
             this.nextLevelToolStripMenuItem.Name = "nextLevelToolStripMenuItem";
-            this.nextLevelToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.nextLevelToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.nextLevelToolStripMenuItem.Text = "Next level";
             this.nextLevelToolStripMenuItem.Click += new System.EventHandler(this.nextLevelToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(274, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(165, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -172,13 +172,13 @@
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.selectBackgroundToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(113, 36);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // selectBackgroundToolStripMenuItem
             // 
             this.selectBackgroundToolStripMenuItem.Name = "selectBackgroundToolStripMenuItem";
-            this.selectBackgroundToolStripMenuItem.Size = new System.Drawing.Size(323, 38);
+            this.selectBackgroundToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.selectBackgroundToolStripMenuItem.Text = "Edit Configuration...";
             this.selectBackgroundToolStripMenuItem.Click += new System.EventHandler(this.editConfigurationToolStripMenuItem_Click);
             // 
@@ -187,21 +187,19 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(1090, 50);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(6);
+            this.tabControl1.Location = new System.Drawing.Point(613, 26);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(934, 1137);
+            this.tabControl1.Size = new System.Drawing.Size(607, 573);
             this.tabControl1.TabIndex = 15;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dataGridViewRunning);
-            this.tabPage1.Location = new System.Drawing.Point(8, 39);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(6);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage1.Size = new System.Drawing.Size(918, 1090);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(599, 547);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Running - Double-click to Edit a Critter";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -221,7 +219,7 @@
             this.timeToGoalDataGridViewTextBoxColumn});
             this.dataGridViewRunning.DataSource = this.critterWrapperBindingSource;
             this.dataGridViewRunning.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewRunning.Location = new System.Drawing.Point(6, 6);
+            this.dataGridViewRunning.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewRunning.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridViewRunning.MultiSelect = false;
             this.dataGridViewRunning.Name = "dataGridViewRunning";
@@ -230,7 +228,7 @@
             this.dataGridViewRunning.RowTemplate.Height = 33;
             this.dataGridViewRunning.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewRunning.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridViewRunning.Size = new System.Drawing.Size(906, 1078);
+            this.dataGridViewRunning.Size = new System.Drawing.Size(593, 541);
             this.dataGridViewRunning.TabIndex = 15;
             this.dataGridViewRunning.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRunning_CellContentDoubleClick);
             // 
@@ -241,18 +239,18 @@
             this.pictureDataGridViewImageColumn.HeaderText = "Picture";
             this.pictureDataGridViewImageColumn.Name = "pictureDataGridViewImageColumn";
             this.pictureDataGridViewImageColumn.ReadOnly = true;
-            this.pictureDataGridViewImageColumn.Width = 85;
+            this.pictureDataGridViewImageColumn.Width = 46;
             // 
             // critterNameDataGridViewTextBoxColumn
             // 
             this.critterNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.critterNameDataGridViewTextBoxColumn.DataPropertyName = "CritterName";
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.critterNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.critterNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.critterNameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.critterNameDataGridViewTextBoxColumn.Name = "critterNameDataGridViewTextBoxColumn";
             this.critterNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.critterNameDataGridViewTextBoxColumn.Width = 113;
+            this.critterNameDataGridViewTextBoxColumn.Width = 60;
             // 
             // ageDataGridViewTextBoxColumn
             // 
@@ -261,14 +259,14 @@
             this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
             this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
             this.ageDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ageDataGridViewTextBoxColumn.Width = 95;
+            this.ageDataGridViewTextBoxColumn.Width = 51;
             // 
             // energyDisplayDataGridViewTextBoxColumn
             // 
             this.energyDisplayDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.energyDisplayDataGridViewTextBoxColumn.DataPropertyName = "EnergyDisplay";
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.energyDisplayDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.energyDisplayDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.energyDisplayDataGridViewTextBoxColumn.HeaderText = "Energy/Status";
             this.energyDisplayDataGridViewTextBoxColumn.Name = "energyDisplayDataGridViewTextBoxColumn";
             this.energyDisplayDataGridViewTextBoxColumn.ReadOnly = true;
@@ -280,7 +278,7 @@
             this.timeToGoalDataGridViewTextBoxColumn.HeaderText = "Time to Goal";
             this.timeToGoalDataGridViewTextBoxColumn.Name = "timeToGoalDataGridViewTextBoxColumn";
             this.timeToGoalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.timeToGoalDataGridViewTextBoxColumn.Width = 125;
+            this.timeToGoalDataGridViewTextBoxColumn.Width = 92;
             // 
             // critterWrapperBindingSource
             // 
@@ -288,25 +286,22 @@
             // 
             // tabControl2
             // 
-            this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl2.Controls.Add(this.tabPage2);
-            this.tabControl2.Location = new System.Drawing.Point(669, 50);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(6);
+            this.tabControl2.Location = new System.Drawing.Point(365, 27);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(417, 1137);
+            this.tabControl2.Size = new System.Drawing.Size(246, 573);
             this.tabControl2.TabIndex = 16;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dataGridViewWaiting);
-            this.tabPage2.Location = new System.Drawing.Point(8, 39);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(6);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage2.Size = new System.Drawing.Size(401, 1090);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(238, 547);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "Waiting";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -323,7 +318,7 @@
             this.critterCreatorDataGridViewTextBoxColumn});
             this.dataGridViewWaiting.DataSource = this.critterWrapperBindingSource;
             this.dataGridViewWaiting.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewWaiting.Location = new System.Drawing.Point(6, 6);
+            this.dataGridViewWaiting.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewWaiting.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridViewWaiting.MultiSelect = false;
             this.dataGridViewWaiting.Name = "dataGridViewWaiting";
@@ -332,7 +327,7 @@
             this.dataGridViewWaiting.RowTemplate.Height = 33;
             this.dataGridViewWaiting.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewWaiting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridViewWaiting.Size = new System.Drawing.Size(389, 1078);
+            this.dataGridViewWaiting.Size = new System.Drawing.Size(232, 541);
             this.dataGridViewWaiting.StandardTab = true;
             this.dataGridViewWaiting.TabIndex = 0;
             // 
@@ -340,44 +335,42 @@
             // 
             this.critterNameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.critterNameDataGridViewTextBoxColumn1.DataPropertyName = "CritterName";
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.critterNameDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.critterNameDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
             this.critterNameDataGridViewTextBoxColumn1.HeaderText = "Name";
             this.critterNameDataGridViewTextBoxColumn1.Name = "critterNameDataGridViewTextBoxColumn1";
             this.critterNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.critterNameDataGridViewTextBoxColumn1.Width = 113;
+            this.critterNameDataGridViewTextBoxColumn1.Width = 60;
             // 
             // critterCreatorDataGridViewTextBoxColumn
             // 
             this.critterCreatorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.critterCreatorDataGridViewTextBoxColumn.DataPropertyName = "CritterCreator";
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.critterCreatorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.critterCreatorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.critterCreatorDataGridViewTextBoxColumn.HeaderText = "Creator";
             this.critterCreatorDataGridViewTextBoxColumn.Name = "critterCreatorDataGridViewTextBoxColumn";
             this.critterCreatorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.critterCreatorDataGridViewTextBoxColumn.Width = 128;
+            this.critterCreatorDataGridViewTextBoxColumn.Width = 66;
             // 
             // tabControl3
             // 
             this.tabControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.tabControl3.Controls.Add(this.tabPage3);
-            this.tabControl3.Location = new System.Drawing.Point(15, 50);
-            this.tabControl3.Margin = new System.Windows.Forms.Padding(6);
+            this.tabControl3.Location = new System.Drawing.Point(8, 26);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(650, 1137);
+            this.tabControl3.Size = new System.Drawing.Size(398, 573);
             this.tabControl3.TabIndex = 17;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dataGridViewLeaderboard);
-            this.tabPage3.Location = new System.Drawing.Point(8, 39);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(6);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage3.Size = new System.Drawing.Size(634, 1090);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(390, 547);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Leaderboard";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -395,7 +388,7 @@
             this.LeaderboardAverageTimeToGoal,
             this.TotalTimeToGoal});
             this.dataGridViewLeaderboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewLeaderboard.Location = new System.Drawing.Point(6, 6);
+            this.dataGridViewLeaderboard.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewLeaderboard.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridViewLeaderboard.MultiSelect = false;
             this.dataGridViewLeaderboard.Name = "dataGridViewLeaderboard";
@@ -403,30 +396,30 @@
             this.dataGridViewLeaderboard.RowHeadersVisible = false;
             this.dataGridViewLeaderboard.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewLeaderboard.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridViewLeaderboard.Size = new System.Drawing.Size(622, 1078);
+            this.dataGridViewLeaderboard.Size = new System.Drawing.Size(384, 541);
             this.dataGridViewLeaderboard.TabIndex = 1;
             // 
             // LeaderboardCritterName
             // 
             this.LeaderboardCritterName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.LeaderboardCritterName.DataPropertyName = "CritterName";
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LeaderboardCritterName.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LeaderboardCritterName.DefaultCellStyle = dataGridViewCellStyle11;
             this.LeaderboardCritterName.HeaderText = "Name";
             this.LeaderboardCritterName.Name = "LeaderboardCritterName";
             this.LeaderboardCritterName.ReadOnly = true;
-            this.LeaderboardCritterName.Width = 113;
+            this.LeaderboardCritterName.Width = 60;
             // 
             // LeaderboardCreator
             // 
             this.LeaderboardCreator.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.LeaderboardCreator.DataPropertyName = "Creator";
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LeaderboardCreator.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LeaderboardCreator.DefaultCellStyle = dataGridViewCellStyle12;
             this.LeaderboardCreator.HeaderText = "Creator";
             this.LeaderboardCreator.Name = "LeaderboardCreator";
             this.LeaderboardCreator.ReadOnly = true;
-            this.LeaderboardCreator.Width = 128;
+            this.LeaderboardCreator.Width = 66;
             // 
             // LeaderboardFinishes
             // 
@@ -435,7 +428,7 @@
             this.LeaderboardFinishes.HeaderText = "Finishes";
             this.LeaderboardFinishes.Name = "LeaderboardFinishes";
             this.LeaderboardFinishes.ReadOnly = true;
-            this.LeaderboardFinishes.Width = 138;
+            this.LeaderboardFinishes.Width = 70;
             // 
             // LeaderboardAverageTimeToGoal
             // 
@@ -444,7 +437,7 @@
             this.LeaderboardAverageTimeToGoal.HeaderText = "Average Time to Goal (Rank)";
             this.LeaderboardAverageTimeToGoal.Name = "LeaderboardAverageTimeToGoal";
             this.LeaderboardAverageTimeToGoal.ReadOnly = true;
-            this.LeaderboardAverageTimeToGoal.Width = 202;
+            this.LeaderboardAverageTimeToGoal.Width = 104;
             // 
             // TotalTimeToGoal
             // 
@@ -458,12 +451,11 @@
             // 
             this.textBoxLog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxLog.Location = new System.Drawing.Point(2034, 1023);
-            this.textBoxLog.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxLog.Location = new System.Drawing.Point(1221, 532);
             this.textBoxLog.Multiline = true;
             this.textBoxLog.Name = "textBoxLog";
-            this.textBoxLog.Size = new System.Drawing.Size(1274, 158);
             this.textBoxLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxLog.Size = new System.Drawing.Size(640, 63);
             this.textBoxLog.TabIndex = 18;
             // 
             // marqueeLabel1
@@ -471,13 +463,13 @@
             this.marqueeLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.marqueeLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.marqueeLabel1.Location = new System.Drawing.Point(0, 1200);
-            this.marqueeLabel1.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
+            this.marqueeLabel1.Location = new System.Drawing.Point(12, 603);
+            this.marqueeLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.marqueeLabel1.Name = "marqueeLabel1";
             this.marqueeLabel1.ScrollingEnabled = true;
             this.marqueeLabel1.ScrollPixelAmount = 3;
             this.marqueeLabel1.ScrollTimerInterval = 5;
-            this.marqueeLabel1.Size = new System.Drawing.Size(3336, 83);
+            this.marqueeLabel1.Size = new System.Drawing.Size(1853, 43);
             this.marqueeLabel1.TabIndex = 3;
             // 
             // arena
@@ -487,20 +479,20 @@
             this.arena.BackColor = System.Drawing.SystemColors.Window;
             this.arena.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("arena.BackgroundImage")));
             this.arena.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.arena.Location = new System.Drawing.Point(2034, 90);
-            this.arena.Margin = new System.Windows.Forms.Padding(4);
-            this.arena.MaximumSize = new System.Drawing.Size(1276, 919);
-            this.arena.MinimumSize = new System.Drawing.Size(1276, 919);
+            this.arena.Location = new System.Drawing.Point(1221, 48);
+            this.arena.Margin = new System.Windows.Forms.Padding(2);
+            this.arena.MaximumSize = new System.Drawing.Size(640, 480);
+            this.arena.MinimumSize = new System.Drawing.Size(640, 480);
             this.arena.Name = "arena";
-            this.arena.Size = new System.Drawing.Size(1276, 919);
+            this.arena.Size = new System.Drawing.Size(640, 480);
             this.arena.TabIndex = 2;
             this.arena.TabStop = false;
             // 
             // CritterWorldForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(3336, 1281);
+            this.ClientSize = new System.Drawing.Size(1869, 653);
             this.Controls.Add(this.textBoxLog);
             this.Controls.Add(this.tabControl3);
             this.Controls.Add(this.tabControl2);
@@ -510,7 +502,7 @@
             this.Controls.Add(this.menuMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuMain;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CritterWorldForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
