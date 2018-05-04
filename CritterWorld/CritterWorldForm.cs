@@ -197,7 +197,7 @@ namespace CritterWorld
         {
             Stop();
             world.Shutdown();
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         public void Add(Sprite sprite)
